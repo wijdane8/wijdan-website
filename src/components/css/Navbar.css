@@ -1,0 +1,84 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;/* Light peach background on initial load */
+  color: #2D3748; /* Dark slate for text */
+  box-shadow: 0 4px 12px rgba(120, 120, 130, 0.08);
+  border-radius: 10px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  
+}
+
+.navbar.scrolled {
+  background: linear-gradient(135deg, #FFF3D6, #FFDCE4, #E8D9FE); /* Example color change */
+  box-shadow: 0 6px 16px rgba(120, 120, 140, 0.15);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+  color: #E57373; /* Light coral pink for logo */
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #9CA3AF; /* Soft gray-blue for links */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Cairo', sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #D65A5A; /* Matching coral hover color */
+  background-color: #FFECEB; /* Soft coral-pink hover background */
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4B5563;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #FFF7ED; /* Match navbar background */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(120, 120, 140, 0.1);
+  }
+
+  .navbar.expanded .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}

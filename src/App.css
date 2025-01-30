@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #1E293B;
+  margin: 0;
+  direction: rtl;
+  line-height: 1.6;
+  background-color: #F9FAFB; /* Subtle background color */
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #111827;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Apply margins to each section */
+section {
+  width: 80vw;
+  height: 95vh; /* Adjusted height to maintain margin visibility */
+  margin: 2.5vh auto; /* Vertical and horizontal centering with margins */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative; /* Optional background for visual separation */
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Next arrow styles */
+.next-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #E57373, #FF8A80); /* Gradient for modern look */
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
+.next-arrow:hover {
+  background: linear-gradient(135deg, #D65A5A, #FF6F61);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .next-arrow {
+    bottom: 18px;
+    right: 18px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+
+  section {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .next-arrow {
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  section {
+    width: 95vw;
+    padding: 1rem;
+  }
+}
+
+/* Add smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
 }

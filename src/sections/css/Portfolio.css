@@ -1,0 +1,51 @@
+/* src/sections/Portfolio.css */
+.portfolio {
+  padding: 4rem 2rem;
+  background-color: #ECF0F1;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  color: #2C3E50;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #2C3E50;
+  margin-top: 1rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #34495E;
+  margin-top: 1rem;
+}
+
+.project-card button {
+  background-color: #1ABC9C;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}

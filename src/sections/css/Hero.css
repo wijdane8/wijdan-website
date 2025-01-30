@@ -1,0 +1,214 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #FFF3D6, #FFDCE4, #E8D9FE);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(120, 120, 130, 0.08);
+  width: 80vw;
+  height: 80vh;
+  margin: auto; /* Center horizontally and vertically */
+  transition: background 0.5s ease-in-out, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:hover {
+  background: linear-gradient(135deg, #FEF6E9, #FFE5EA, #F3EAFE);
+  box-shadow: 0 12px 28px rgba(150, 150, 150, 0.12);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+  transform: rotate(45deg);
+  animation: shimmer 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(50%);
+  }
+}
+
+.hero-content {
+  max-width: 48%;
+  text-align: right;
+  animation: slideIn 0.8s ease-in-out;
+  z-index: 1; /* Ensure content is above the shimmer effect */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #ffffff; /* White for contrast */
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-family: 'Cairo', sans-serif;
+  text-shadow: 3px 3px 8px rgba(55, 65, 81, 0.3); /* Subtle shadow with grey tone */
+}
+
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: #8e9093; /* Soft light grey */
+  margin: 1.2rem 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.85rem 2.2rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+  box-shadow: 0 6px 14px rgba(120, 120, 130, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: #E57373; /* Light coral pink */
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.btn-primary::before, .btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::before, .btn-secondary:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-primary:hover {
+  background-color: #D65A5A; /* Slightly darker coral */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(220, 90, 90, 0.2);
+}
+
+.btn-secondary {
+  background-color: #FFCE8E; /* Soft honey yellow */
+  color: #4B5563; /* Medium gray for contrast */
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background-color: #FFB964; /* Vibrant honey shade */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(255, 160, 90, 0.2);
+}
+
+.hero-image {
+  text-align: center;
+  max-width: 40%;
+  animation: fadeIn 1s ease-in-out;
+  z-index: 1; /* Ensure image is above the shimmer effect */
+}
+
+.hero-image img {
+  border-radius: 50%;
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border: 5px solid #F8F9FC; /* Soft off-white border */
+  box-shadow: 0 12px 28px rgba(160, 160, 170, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(160, 160, 170, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .btn-primary, .btn-secondary {
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
