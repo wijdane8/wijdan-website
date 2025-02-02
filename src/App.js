@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import './App.css';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
+
+
 function App() {
   const [showArrow, setShowArrow] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);

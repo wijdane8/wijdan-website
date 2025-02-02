@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -7,8 +8,8 @@
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(120, 120, 130, 0.1);
   width: 80vw;
-  height: 70vh; /* Reduced height for better spacing */
-  margin: 5vh auto; /* Center both horizontally and vertically */
+  height: 70vh;
+  margin: 5vh auto;
   transition: background 0.5s ease-in-out, box-shadow 0.5s ease;
   position: relative;
   overflow: hidden;
@@ -33,15 +34,10 @@
 }
 
 @keyframes shimmer {
-  0% {
-    transform: rotate(45deg) translateX(-50%);
-  }
-  100% {
-    transform: rotate(45deg) translateX(50%);
-  }
+  0% { transform: rotate(45deg) translateX(-50%); }
+  100% { transform: rotate(45deg) translateX(50%); }
 }
 
-/* Hero Content Styling */
 .hero-content {
   max-width: 48%;
   text-align: right;
@@ -51,17 +47,17 @@
 
 .hero-content h1 {
   font-size: 3.5rem;
-  color: #ffffff; /* Darker grey for strong contrast */
+  color: #ffffff;
   font-weight: 800;
   line-height: 1.3;
   margin-bottom: 1rem;
   font-family: 'Cairo', sans-serif;
-  text-shadow: 3px 3px 10px rgba(150, 150, 150, 0.3); /* Soft grey shadow */
+  text-shadow: 2px 3px 2px rgba(108, 107, 107, 0.625);
 }
 
 .hero-content p {
   font-size: 1.4rem;
-  color: #777777; /* Light grey for a modern look */
+  color: #777777;
   margin: 1.2rem 0;
   font-family: 'Cairo', sans-serif;
   text-shadow: 1px 1px 5px rgba(180, 180, 180, 0.2);
@@ -74,7 +70,7 @@
   justify-content: flex-end;
 }
 
-/* Button Styling */
+/* Buttons */
 .btn-primary, .btn-secondary {
   padding: 0.85rem 2.2rem;
   border: none;
@@ -87,13 +83,20 @@
   box-shadow: 0 6px 14px rgba(120, 120, 130, 0.12);
   position: relative;
   overflow: hidden;
-}
-.btn-primary {
-  background-color: #E57373; /* Light coral pink */
-  color: #FFF;
   text-transform: uppercase;
 }
 
+.btn-primary {
+  background-color: #E57373;
+  color: #FFF;
+}
+
+.btn-secondary {
+  background-color: #FFCE8E;
+  color: #4B5563;
+}
+
+/* Button Hover Effects */
 .btn-primary::before, .btn-secondary::before {
   content: '';
   position: absolute;
@@ -101,32 +104,27 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.077) 10%, transparent 70%);
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s ease;
   pointer-events: none;
 }
 
-btn-primary:hover::before, .btn-secondary:hover::before {
+.btn-primary:hover::before, .btn-secondary:hover::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.btn-primary:hover {
-  background-color: #D65A5A; /* Slightly darker coral */
+.btn-primary:hover, .btn-secondary:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(220, 90, 90, 0.2);
+  box-shadow: 0 12px 24px rgba(125, 125, 125, 0.41);
 }
 
-.btn-secondary {
-  background-color: #FFCE8E; /* Soft honey yellow */
-  color: #4B5563; /* Medium gray for contrast */
-  text-transform: uppercase;
+.btn-primary:hover {
+  background-color: #D65A5A;
 }
 
 .btn-secondary:hover {
-  background-color: #FFB964; /* Vibrant honey shade */
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(255, 160, 90, 0.2);
+  background-color: #FFB964;
 }
 
 /* Hero Image */
@@ -192,23 +190,11 @@ btn-primary:hover::before, .btn-secondary:hover::before {
 
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }

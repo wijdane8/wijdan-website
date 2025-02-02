@@ -5,13 +5,13 @@ import './css/Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">Your Logo</div>
+      <div className="logo">وجــــدان الحــربي</div>
       <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#about">نبذة</a></li>
+        <li><a href="#services">خدماتي</a></li>
+        <li><a href="#portfolio">الملف التعريفي</a></li>
+        <li><a href="#contact">تواصل معي</a></li>
       </ul>
     </nav>
   );
