@@ -1,4 +1,3 @@
-// src/sections/Hero.js
 import React from 'react';
 import './css/Hero.css';
 
@@ -6,13 +5,15 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <h1>وجدان الحربي</h1>
-        <p className="tagline">مطور برمجيات متكامل | تصميم حلول قابلة للتوسع في عالم متغير</p>
+        <div className="hero-text">
+          <h1>وجدان الحربي</h1>
+          <p className="tagline">مطورة برمجيات متكاملة | تصميم حلول قابلة للتوسع في عالم متغير</p>
+        </div>
         <div className="cta-buttons">
           <button className="btn-primary">استعن بي</button>
           <button className="btn-secondary">آخر الأعمال</button>
         </div>
-        <div className="social-links">
+        <div className="social-links text-end">
           <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="لينكدإن">
             <i className="fab fa-linkedin"></i>
           </a>

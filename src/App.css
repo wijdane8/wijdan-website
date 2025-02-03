@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
   background-color: #F9FAFB; /* Subtle background color */
   overflow-x: hidden;
+  padding-top: 2.3rem
 }
 
 h1, h2, h3 {
@@ -27,8 +28,8 @@ button {
 /* Apply margins to each section */
 section {
   width: 80vw;
-  height: 95vh; /* Adjusted height to maintain margin visibility */
-  margin: 2.5vh auto; /* Vertical and horizontal centering with margins */
+  height: 85vh; /* Adjusted height to maintain margin visibility */
+  margin: 7vh auto; /* Vertical and horizontal centering with margins */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +60,7 @@ section {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
 }
 
 .next-arrow:hover {

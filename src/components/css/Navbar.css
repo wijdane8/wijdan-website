@@ -1,32 +1,37 @@
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;/* Light peach background on initial load */
-  color: #2D3748; /* Dark slate for text */
-  box-shadow: 0 4px 12px rgba(120, 120, 130, 0.08);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 1px 12px rgba(120, 120, 130, 0.08);
   border-radius: 10px;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 10;
-  
+  background-color: #F9FAFB; /* Or your initial background color */
 }
 
 .navbar.scrolled {
-  background: linear-gradient(135deg, #FFF3D6, #FFDCE4, #E8D9FE); /* Example color change */
-  box-shadow: 0 6px 16px rgba(120, 120, 140, 0.15);
-  transition: background 0.5s ease, box-shadow 0.5s ease;
+  background: linear-gradient(135deg, #FEF6E9, #FFE5EA, #F3EAFE);
+  box-shadow: 0 6px 10px rgba(120, 120, 140, 0.15);
+}
+.navbar.scrolled .nav-links a {
+  color: #60536f;
+}
+.navbar.scrolled .nav-links a:hover {
+  color: #c6ace7;
+  background-color:#ffe5ea00
 }
 
-
-.nav-logo {
-  font-size: 1.8rem;
+.logo {
+  font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Cairo', sans-serif;
-  color: #E57373; /* Light coral pink for logo */
+  color:#a18abd;
+  text-shadow: 0 3px 5px #FFDCE4;
   text-transform: uppercase;
 }
 
@@ -37,7 +42,7 @@
 }
 
 .nav-links a {
-  color: #9CA3AF; /* Soft gray-blue for links */
+  color: #60536f;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -48,15 +53,15 @@
 }
 
 .nav-links a:hover {
-  color: #D65A5A; /* Matching coral hover color */
-  background-color: #FFECEB; /* Soft coral-pink hover background */
+  color: #c6ace7;
+  background-color:#ffe5ea00
 }
 
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #4B5563;
+  color: #a18abd;
 }
 
 @media (max-width: 768px) {
@@ -64,14 +69,15 @@
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: #FFF7ED; /* Match navbar background */
+    background-color: #f1f1f1e4;
     position: absolute;
     top: 100%;
     right: 0;
-    width: 60%;
+    width: 100%;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(120, 120, 140, 0.1);
+    text-align: center;
   }
 
   .navbar.expanded .nav-links {
@@ -80,5 +86,9 @@
 
   .nav-toggle {
     display: block;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 }

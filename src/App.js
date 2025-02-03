@@ -30,7 +30,7 @@ function App() {
     // Show the arrow after 5 seconds
     const timer = setTimeout(() => {
       setShowArrow(true);
-    }, 1000);
+    }, 2000);
 
     const handleScroll = () => {
       const navbar = document.querySelector('.navbar');
@@ -90,7 +90,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <section id="hero"><Hero /></section>
+      <section id="hero" ><Hero /></section>
       <section id="about"><About /></section>
       <section id="services"><Services /></section>
       <section id="portfolio"><Portfolio /></section>
