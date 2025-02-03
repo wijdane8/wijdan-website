@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   background: linear-gradient(135deg, #FFF3D6, #FFDCE4, #E8D9FE);
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(120, 120, 130, 0.1);
@@ -53,6 +53,7 @@
 .hero-text {
   text-align: start; /* Text aligned to the right within its container */
   max-width: 100%; /* Adjust as needed */
+  margin-bottom: 5rem;;
 }
 
 .hero-content h1 {

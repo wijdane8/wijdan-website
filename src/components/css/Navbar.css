@@ -13,7 +13,6 @@
   z-index: 10;
   background-color: #F9FAFB; /* Or your initial background color */
 }
-
 .navbar.scrolled {
   background: linear-gradient(135deg, #FEF6E9, #FFE5EA, #F3EAFE);
   box-shadow: 0 6px 10px rgba(120, 120, 140, 0.15);

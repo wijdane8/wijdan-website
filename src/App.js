@@ -1,5 +1,4 @@
-// src/App.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -11,23 +10,20 @@ import Footer from './components/Footer';
 import './App.css';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
-
-
 function App() {
-  const [showArrow, setShowArrow] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
+  const [showArrow, setShowArrow] = useState(false); // Keep showArrow
 
-  const sections = [
+  const sections = useMemo(() => [
     { id: 'hero', component: Hero },
     { id: 'about', component: About },
     { id: 'services', component: Services },
     { id: 'portfolio', component: Portfolio },
     { id: 'testimonials', component: Testimonials },
     { id: 'contact', component: Contact },
-  ];
+  ], []);
 
   useEffect(() => {
-    // Show the arrow after 5 seconds
     const timer = setTimeout(() => {
       setShowArrow(true);
     }, 2000);
@@ -40,7 +36,6 @@ function App() {
         navbar.classList.remove('scrolled');
       }
 
-      // Update the current section based on scroll position
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       let newCurrentSection = 0;
 
@@ -60,9 +55,8 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer); // Clear the timer
       window.removeEventListener('scroll', handleScroll);
     };
   }, [sections]);
@@ -90,7 +84,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <section id="hero" ><Hero /></section>
+      <section id="hero"><Hero /></section>
       <section id="about"><About /></section>
       <section id="services"><Services /></section>
       <section id="portfolio"><Portfolio /></section>
@@ -98,9 +92,8 @@ function App() {
       <section id="contact"><Contact /></section>
       <Footer />
 
-      {/* Fixed Arrow Button */}
-      {showArrow && (
-        <button className="next-arrow" onClick={handleArrowClick}>
+      {showArrow && ( // Conditionally render the button
+        <button className="next-arrow" onClick={handleArrowClick} style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: '100' }}>
           {currentSection === sections.length - 1 ? <FaArrowUp /> : <FaArrowDown />}
         </button>
       )}
