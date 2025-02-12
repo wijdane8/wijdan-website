@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wijdan-website/static/css/main.0bc66efc.css",
+    "main.js": "/wijdan-website/static/js/main.6cc383e9.js",
+    "static/js/488.32711530.chunk.js": "/wijdan-website/static/js/488.32711530.chunk.js",
+    "static/media/pexels-padrinan-19670.jpg": "/wijdan-website/static/media/pexels-padrinan-19670.96f3367e3cc1213c1818.jpg",
+    "index.html": "/wijdan-website/index.html",
+    "main.0bc66efc.css.map": "/wijdan-website/static/css/main.0bc66efc.css.map",
+    "main.6cc383e9.js.map": "/wijdan-website/static/js/main.6cc383e9.js.map",
+    "488.32711530.chunk.js.map": "/wijdan-website/static/js/488.32711530.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bc66efc.css",
+    "static/js/main.6cc383e9.js"
+  ]
+}
