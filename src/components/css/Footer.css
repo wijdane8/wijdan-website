@@ -3,22 +3,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #2C3E50;
-  color: white;
+  padding: 2rem; /* Increased padding for better spacing */
+  background-color: #f8f8ff; /* Lighter background color to match the design */
+  color: #555; /* Darker text color for better contrast */
+  border-radius: 24px; /* Rounded corners to align with form and other sections */
+  box-shadow: inset 5px 5px 10px #e0e0e0, inset -5px -5px 10px #ffffff; /* Neumorphic inset shadow for subtle depth */
+  margin-top: 2rem; /* Add margin at the top to separate from content */
+  font-family: 'Tajawal', sans-serif; /* Consistent font family */
+  font-size: 0.9rem; /* Slightly reduced font size for footer text */
 }
 
 .footer-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap for better spacing between links */
+  padding-right: 0; /* Reset default padding for ul in right-to-left */
+  margin-bottom: 0; /* Reset default margin for ul */
 }
 
 .footer-links a {
-  color: white;
+  color: #555; /* Match link color with text color */
   text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
 
 .footer-links a:hover {
-  color: #1ABC9C;
+  color: #D2B4BC; /* Dusty Rose - Hover color to match website theme */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Stack links and copyright on smaller screens */
+      text-align: center; /* Center text in footer on smaller screens */
+      padding: 1.5rem; /* Adjust padding for smaller screens */
+      border-radius: 20px; /* Slightly smaller border-radius for smaller screens */
+  }
+
+  .footer-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center links in column */
+      margin-top: 1rem; /* Add margin to separate links from copyright in column layout */
+      gap: 1rem; /* Adjust gap for stacked links */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 1rem; /* Further reduce padding for very small screens */
+      border-radius: 16px; /* Even smaller border-radius for very small screens */
+      font-size: 0.85rem; /* Slightly smaller font size for very small screens */
+  }
+
+  .footer-links {
+      gap: 0.8rem; /* Adjust gap for very small screens */
+  }
 }

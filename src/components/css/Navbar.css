@@ -1,93 +1,131 @@
+/* Navbar.css - v9 - Hamburger Icon Fix & Mobile Menu Background */
+/* CSS file for Navbar with Neumorphic design and responsive adjustments - Hamburger visibility fixed and mobile menu background added */
+
+/* Import Fonts - Elegant & Modern Pairing */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
+
+/* General Navbar Styles */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 1px 12px rgba(120, 120, 130, 0.08);
-  border-radius: 10px;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #F9FAFB; /* Or your initial background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background: #f0f0f5;
+    border-radius: 20px;
+    box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
 }
+
 .navbar.scrolled {
-  background: linear-gradient(135deg, #FEF6E9, #FFE5EA, #F3EAFE);
-  box-shadow: 0 6px 10px rgba(120, 120, 140, 0.15);
+    background: #f0f0f5;
+    box-shadow: 0 1px 12px rgba(120, 120, 130, 0.08);
 }
+
 .navbar.scrolled .nav-links a {
-  color: #60536f;
+    color: #60536f;
 }
+
 .navbar.scrolled .nav-links a:hover {
-  color: #c6ace7;
-  background-color:#ffe5ea00
+    color: #c2a4ac;
+    background-color: transparent;
 }
 
+/* Logo Styles */
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Cairo', sans-serif;
-  color:#a18abd;
-  text-shadow: 0 3px 5px #FFDCE4;
-  text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Amiri', serif;
+    color: #D2B4BC;
+    text-shadow: 1px 1px 2px rgba(230, 230, 230, 0.7);
+    text-transform: uppercase;
 }
 
+/* Navigation Links Styles */
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
 .nav-links a {
-  color: #60536f;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  font-family: 'Cairo', sans-serif;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+    color: #424242;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Cairo', sans-serif;
+    padding: 0.6rem 1.5rem;
+    border-radius: 14px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #c6ace7;
-  background-color:#ffe5ea00
+    color: #D2B4BC;
+    background-color: transparent;
+    box-shadow: 4px 4px 8px #e0e0e0, -4px -4px 8px #ffffff;
+    transform: translateY(-2px);
 }
 
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #a18abd;
+.nav-links a:active {
+    transform: translateY(0);
+    box-shadow: 2px 2px 4px #e0e0e0, -2px -2px 4px #ffffff;
 }
 
+/* Navbar Toggle Button Styles */
+.navbar-toggle {
+    display: none; /* Hidden by default on larger screens - ENSURING THIS IS PRESENT */
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #D2B4BC;
+}
+
+/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    background-color: #f1f1f1e4;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(120, 120, 140, 0.1);
-    text-align: center;
-  }
+    .nav-links {
+        display: none; /* Hidden by default in mobile, shown when expanded */
+        flex-direction: column;
+        gap: 0.75rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 20px;
+        text-align: center;
+        background-color: #f8f8ffe0; /* ADDED BACKGROUND COLOR FOR MOBILE MENU */
+        box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+    }
 
-  .navbar.expanded .nav-links {
-    display: flex;
-  }
+    .navbar.expanded .nav-links {
+        display: flex; /* Show nav links when navbar is expanded on mobile */
+    }
 
-  .nav-toggle {
-    display: block;
-  }
+    .navbar-toggle {
+        display: block; /* Shown on smaller screens */
+    }
 
-  .logo {
-    font-size: 1.5rem;
-  }
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .nav-links a {
+        box-shadow: none;
+        border-radius: 16px;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f5;
+        color: #D2B4BC;
+        transform: translateY(0);
+    }
+
+    .nav-links a:active {
+        background-color: #e0e0e0;
+        box-shadow: none;
+    }
 }

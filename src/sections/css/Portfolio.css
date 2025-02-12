@@ -1,51 +1,370 @@
-/* src/sections/Portfolio.css */
+/* Portfolio Section - v2 - Styles for Images and Links */
 .portfolio {
-  padding: 4rem 2rem;
-  background-color: #ECF0F1;
-  text-align: center;
+  width: 95vw;
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background-color: #f0f0f5;
+  border-radius: 32px;
+  box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  direction: rtl;
+  color: #424242;
 }
 
-.portfolio h2 {
-  font-size: 2rem;
-  color: #2C3E50;
+.portfolio:hover {
+  box-shadow: 8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff;
+  transform: translateY(-5px);
 }
 
-.project-cards {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
 
-.project-card {
-  background-color: #FFFFFF;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 30%;
-}
-
-.project-card img {
+.slide-content {
   width: 100%;
-  border-radius: 10px;
+  margin: 0;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  z-index: 1;
+  padding: 3rem;
+  background-color: #f0f0f5;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  transition: all 0.3s ease-in-out;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  color: #2C3E50;
-  margin-top: 1rem;
+
+.slide-content h2 {
+  font-size: 2.8rem;
+  color: #D2B4BC;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  font-family: 'Cairo', sans-serif;
+  text-shadow: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.project-card p {
-  font-size: 1rem;
-  color: #34495E;
-  margin-top: 1rem;
+.slide-content h2:hover {
+  color: #C2A4AC;
+  transform: scale(1.03);
 }
 
-.project-card button {
-  background-color: #1ABC9C;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1rem;
+
+.slide-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #606060;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-family: 'Tajawal', sans-serif;
+  text-align: right;
+}
+
+.slide-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.slide-content ul li {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.slide-content .highlight {
+  color: #D2B4BC;
+  font-weight: 600;
+}
+
+/* ================= Accordion Styles - v2 - With Images and Links ================= */
+.accordion-container {
+  width: 100%;
+  min-width: auto;
+  margin: 0;
+  border-radius: 24px;
+  box-shadow: 5px 5px 10px #e0e0e0, -5px -5px 10px #ffffff;
+  background-color: #f8f8ff;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  direction: rtl;
+}
+
+.accordion-container:hover {
+  box-shadow: 6px 6px 12px #d0d0d0, -6px -6px 12px #ffffff;
+}
+
+.accordion-container div {
+  border-bottom: 2px solid #f0f0f5;
+  transition: all 0.3s ease-in-out;
+}
+
+.summary {
+  font-family: 'Cairo', sans-serif;
+  text-transform: none;
   cursor: pointer;
+  line-height: 1.5;
+  padding: 1.2rem 1.5rem;
+  color: #D2B4BC;
+  text-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.summary:hover {
+  background-color: #f0f0f5;
+}
+
+.toggle-icon {
+  margin-left: 0;
+  margin-right: 1rem;
+  font-weight: 700;
+  font-size: 1em;
+  min-width: 20px;
+  transition: transform 0.3s ease-in-out;
+  color: #D2B4BC;
+}
+
+
+.active .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.inactive .toggle-icon {
+  transform: rotate(0deg);
+}
+
+.folding-pannel {
+  display: block;
+  overflow: hidden; /* Add overflow: hidden; to clip content during animation */
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out; /* Transition height, opacity, and padding */
+  line-height: 1.6;
+  background-color: #f8f8ff;
+  padding: 1.5rem;
+  color: #606060;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.15rem;
+  text-align: right;
+  display: flex; /* Enable flexbox for panel content */
+  flex-direction: column; /* Stack content vertically in panel */
+  align-items: flex-end; /* Align items to the right in RTL */
+}
+
+.active .summary {
+  border-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+  background-color: #f0f0f5;
+}
+
+.inactive .folding-pannel {
+  opacity: 0;
+  height: 0;
+  padding-top: 0; /* Set padding to 0 when inactive */
+  padding-bottom: 0; /* Set padding to 0 when inactive */
+  margin: 0;
+}
+
+.active .folding-pannel {
+  opacity: 1;
+  height: auto; /* Let height adjust to content */
+  padding: 1.5rem; /* Keep padding for active panel */
+  margin: 0;
+}
+
+/* Project Interface Image Styles */
+.project-interface-image {
+  width: 100%; /* Image takes full width of the panel */
+  max-width: 500px; /* Adjust max width as needed */
+  border-radius: 12px;
+  margin-bottom: 1.5rem; /* Space below the image */
+  box-shadow: 4px 4px 8px #e0e0e0, -4px -4px 8px #ffffff; /* Subtle image shadow */
+}
+
+/* Project Link Button Styles */
+.project-link-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #D2B4BC; /* Dusty Rose button color */
+  color: #fff; /* White text color */
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 24px; /* Rounded button corners */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 3px 3px 6px #e0e0e0, -3px -3px 6px #ffffff; /* Button shadow */
+}
+
+.project-link-button:hover {
+  background-color: #C2A4AC; /* Darker Dusty Rose on hover */
+  transform: scale(1.05); /* Slight scale up on hover */
+  box-shadow: 4px 4px 8px #d0d0d0, -4px -4px 8px #ffffff; /* Adjusted hover shadow */
+}
+
+
+/* Responsive Design - v2 - With Images and Links */
+@media (max-width: 1024px) {
+  .portfolio {
+    padding: 2.5rem 1.5rem;
+    margin: 4rem auto;
+    border-radius: 24px;
+  }
+
+  .slide-content {
+    padding: 2.5rem;
+    border-radius: 24px;
+  }
+
+  .slide-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .slide-content ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .accordion-container {
+    border-radius: 20px;
+  }
+  .summary {
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
+  }
+  .folding-pannel {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .project-interface-image {
+    max-width: 400px; /* Adjusted max image width for smaller screens */
+    margin-bottom: 1.2rem;
+  }
+  .project-link-button {
+    font-size: 1rem; /* Adjusted button font size for smaller screens */
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 2rem 1rem;
+    margin: 3rem auto;
+    border-radius: 20px;
+  }
+
+  .slide-content {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide-content p,
+  .slide-content ul li {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  .slide-content ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .accordion-container {
+    border-radius: 18px;
+  }
+  .summary {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.1rem;
+  }
+  .folding-pannel {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .project-interface-image {
+    max-width: 300px; /* Adjusted max image width for mobile */
+    margin-bottom: 1rem;
+  }
+  .project-link-button {
+    font-size: 0.95rem; /* Adjusted button font size for mobile */
+    padding: 0.6rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    margin: 2.5rem auto;
+    padding: 1.5rem 0.8rem;
+    border-radius: 16px;
+  }
+
+  .slide-content {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .slide-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .slide-content p,
+  .slide-content ul li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .slide-content ul li {
+    margin-bottom: 0.4rem;
+  }
+  .accordion-container {
+    border-radius: 14px;
+  }
+  .summary {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .folding-pannel {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+  .project-interface-image {
+    max-width: 250px; /* Adjusted max image width for very small screens */
+    margin-bottom: 0.8rem;
+  }
+  .project-link-button {
+    font-size: 0.9rem; /* Adjusted button font size for very small screens */
+    padding: 0.5rem 1.4rem;
+    border-radius: 20px; /* Slightly less rounded button on very small screens */
+  }
+}
+
+
+/* Animations - v2 - With Images and Links - Using fadeIn only */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

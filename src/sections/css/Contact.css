@@ -1,40 +1,170 @@
-/* src/sections/Contact.css */
+/* Contact.css - Styles for the Contact Section */
+
 .contact {
-  padding: 4rem 2rem;
-  background-color: #ECF0F1;
-  text-align: center;
+  width: 95vw;
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background-color: #f0f0f5;
+  border-radius: 32px;
+  box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  direction: rtl;
+  color: #424242;
+  text-align: center; /* Center align text in the section */
 }
 
-.contact h2 {
-  font-size: 2rem;
-  color: #2C3E50;
+.contact:hover {
+  box-shadow: 8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff;
+  transform: translateY(-5px);
 }
 
-.contact-form {
+.slide-content {
+  width: 100%;
+  margin: 0;
+  animation: fadeIn 0.8s ease-in-out;
+  z-index: 1;
+  padding: 3rem;
+  background-color: #f0f0f5;
+  border-radius: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center content horizontally */
+  justify-content: center;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-content h2 {
+  font-size: 2.8rem;
+  color: #D2B4BC;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  font-family: 'Cairo', sans-serif;
+  text-shadow: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.slide-content h2:hover {
+  color: #C2A4AC;
+  transform: scale(1.03);
+}
+
+.slide-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #606060;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-family: 'Tajawal', sans-serif;
+  text-align: center; /* Center align paragraph text */
+  max-width: 800px; /* Limit paragraph width for better readability */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contact info items */
+  gap: 1rem; /* Spacing between contact info items */
   margin-top: 2rem;
 }
 
-.contact-form input, .contact-form textarea {
-  width: 50%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid #CBD5E1;
-  border-radius: 5px;
+.contact-info p {
+  font-size: 1.2rem;
+  color: #555;
+  font-family: 'Tajawal', sans-serif;
+  margin-bottom: 0; /* Remove default paragraph margin in contact info */
 }
 
-.contact-form textarea {
-  height: 150px;
+.contact-info a {
+  color: #D2B4BC;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.contact-form button {
-  background-color: #1ABC9C;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-  cursor: pointer;
+.contact-info a:hover {
+  color: #C2A4AC;
+  transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+      padding: 2rem 1rem;
+      margin: 3rem auto;
+      border-radius: 20px;
+  }
+
+  .slide-content {
+      padding: 2rem;
+      border-radius: 20px;
+  }
+
+  .slide-content h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .slide-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+      margin-top: 1.5rem;
+      gap: 0.8rem;
+  }
+
+  .contact-info p {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+      margin: 2.5rem auto;
+      padding: 1.5rem 0.8rem;
+      border-radius: 16px;
+  }
+
+  .slide-content {
+      padding: 1.5rem;
+      border-radius: 16px;
+  }
+
+  .slide-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+  }
+
+  .slide-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+  }
+
+  .contact-info {
+      margin-top: 1.2rem;
+      gap: 0.6rem;
+  }
+
+  .contact-info p {
+      font-size: 1rem;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

@@ -1,0 +1,234 @@
+/* Certificates.css - v6 - Complete file with Neumorphic Buttons and General Styles */
+/* Combines Certificates section styles with general body and button styles for easier implementation if using separate CSS files */
+
+/* General RTL and UI/UX Adjustments & Font Imports (consistent with Hero.css) */
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f0f0f5; /* Consistent background color across the site */
+    padding: 0;
+    margin: 0;
+}
+
+/* Link Google Fonts - Elegant & Modern Pairing */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
+
+
+/* Certificates Section Styles */
+.certificates-section {
+    width: 95vw;
+    max-width: 1400px;
+    margin: 5rem auto;
+    background-color: #f0f0f5; /* Confirmed Background Color - consistent with body */
+    color: #4a4a4a;
+    border-radius: 32px;
+    box-shadow: 10px 10px 20px #e0e0e0, -10px -10px 20px #ffffff;
+    padding: 4rem 3rem;
+    direction: rtl;
+    border: 1px solid #eee;
+}
+
+.slide-content {
+    padding: 2.5rem;
+}
+
+.slide-content h2 {
+    font-size: 3.75rem;
+    color: #D2B4BC; /* Confirmed Heading Color: Dusty Rose */
+    margin-bottom: 2.5rem;
+    position: relative;
+    line-height: 1.2;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.slide-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90px;
+    height: 4px;
+    background: #D2B4BC; /* Confirmed Heading Underline Color: Dusty Rose */
+    border-radius: 3px;
+}
+
+.slide-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2.5rem;
+}
+
+.slide-content li {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3rem;
+    line-height: 2.1;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1.5px dashed #e2d8e8;
+    color: #5f5f5f;
+}
+
+.slide-content li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.slide-content li span.highlight {
+    color: #aa7ab7;
+    font-weight: 600;
+}
+
+/* Buttons with Neumorphic Checkbox Effect - Consistent Button Styling */
+.btn-primary,
+.btn-secondary {
+    padding: 0.8rem 2.3rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f0f5; /* Neumorphic Background - consistent with body and sections */
+    color: #424242;
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.8),
+                 6px  6px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #f0f0f5; /* Neumorphic Background */
+    color: #D2B4BC; /* Dusty Rose for text */
+}
+
+.btn-secondary {
+    background-color: #f0f0f5; /* Neumorphic Background */
+    color: #E0BBE4; /* Pale Mauve for text */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: -8px -8px 12px rgba(255,255,255,0.8),
+                 8px  8px 12px rgba(0,0,0,0.1);
+    background-color: #f0f0f5c2;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: inset -4px -4px 6px rgba(255,255,255,0.7),
+                 inset 4px  4px 6px rgba(0,0,0,0.1);
+    background-color: #f0f0f5;
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.btn-primary:hover::before,
+.btn-secondary::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Responsive Design for Certificates Section - v6 - Consistent with Main CSS Breakpoints */
+@media (max-width: 1200px) {
+    .slide-content li {
+        font-size: 1.25rem;
+        line-height: 2;
+    }
+    .slide-content h2 {
+        font-size: 3.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .certificates-section {
+        padding: 3.5rem 2.5rem;
+        margin: 4.5rem auto;
+    }
+    .slide-content {
+        padding: 2rem;
+    }
+    .slide-content h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .slide-content ul {
+        margin-top: 2rem;
+    }
+    .slide-content li {
+        font-size: 1.15rem;
+        line-height: 1.9;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificates-section {
+        padding: 2.5rem 2rem;
+        margin: 4rem auto;
+        border-radius: 24px;
+    }
+    .slide-content {
+        padding: 1.8rem;
+    }
+    .slide-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.8rem;
+    }
+    .slide-content ul {
+        margin-top: 1.8rem;
+    }
+    .slide-content li {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-section {
+        padding: 2rem 1.5rem;
+        margin: 3.5rem auto;
+        border-radius: 20px;
+    }
+    .slide-content {
+        padding: 1.2rem;
+    }
+    .slide-content h2 {
+        font-size: 2.1rem;
+        margin-bottom: 1.2rem;
+    }
+    .slide-content ul {
+        margin-top: 1.5rem;
+    }
+    .slide-content li {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+}

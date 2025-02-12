@@ -1,0 +1,169 @@
+/* WhyChooseMe.css - v4 - Intro Paragraph Removed */
+.why-choose-me {
+    width: 95vw;
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 3rem 2rem;
+    background-color: #f0f0f5;
+    border-radius: 32px;
+    box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+    direction: rtl;
+    color: #424242;
+  }
+  
+  .why-choose-me-content {
+    padding: 2rem 0;
+  }
+  
+  .why-choose-me h2 {
+    font-size: 2.8rem;
+    color: #D2B4BC;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem; /* Increased margin-bottom for heading */
+  }
+  
+  /* .why-choose-me .intro-paragraph {  Intro paragraph styles removed */
+  /*   font-size: 1.3rem; */
+  /*   font-family: 'Tajawal', sans-serif; */
+  /*   line-height: 1.7; */
+  /*   margin-bottom: 2.5rem; */
+  /*   color: #606060; */
+  /*   text-align: center; */
+  /* } */
+  
+  /* ================= Reasons Grid - Merged Content ================= */
+  .why-choose-me .reasons-grid { /* Changed class name */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted min-width */
+    gap: 2rem; /* Adjusted gap */
+    margin-bottom: 2.5rem;
+  }
+  
+  .why-choose-me .reason-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within items */
+    gap: 1.2rem; /* Adjusted vertical gap */
+    padding: 2rem 1.5rem; /* Adjusted padding - more vertical */
+    background-color: #f8f8ff;
+    border-radius: 24px;
+    box-shadow: 6px 6px 12px #e0e0e0, -6px -6px 12px #ffffff; /* Adjusted shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .why-choose-me .reason-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff; /* Adjusted hover shadow */
+  }
+  
+  .why-choose-me .reason-item .icon {
+    font-size: 3rem; /* Increased icon size */
+    color: #D2B4BC;
+    flex-shrink: 0;
+  }
+  
+  .why-choose-me .reason-item .text-content h3 {
+    font-size: 1.7rem; /* Increased heading size */
+    font-family: 'Cairo', sans-serif;
+    color: #D2B4BC;
+    margin-bottom: 0.8rem; /* Adjusted margin */
+    line-height: 1.4; /* Adjusted line height for heading */
+  }
+  
+  .why-choose-me .reason-item .text-content p {
+    font-size: 1.2rem; /* Adjusted paragraph size */
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.7; /* Adjusted line height for paragraph */
+    color: #555;
+    margin-bottom: 0;
+  }
+  
+  
+  /* Responsive adjustments - v4 - Intro Paragraph Removed */
+  @media (max-width: 1024px) {
+    .why-choose-me h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem; /* Adjusted margin-bottom for heading */
+    }
+    /* .why-choose-me .intro-paragraph { Responsive styles removed } */
+    .why-choose-me .reasons-grid {
+      grid-template-columns: 1fr; /* Stack on smaller screens */
+      gap: 1.5rem; /* Adjusted gap for stacked items */
+      margin-bottom: 2rem;
+    }
+    .why-choose-me .reason-item {
+      padding: 1.8rem 1.2rem; /* Adjusted padding for smaller screens */
+      border-radius: 20px; /* Less rounded on smaller screens */
+      gap: 1rem; /* Adjusted gap for smaller screens */
+    }
+    .why-choose-me .reason-item .icon {
+      font-size: 2.5rem; /* Adjusted icon size for smaller screens */
+    }
+    .why-choose-me .reason-item .text-content h3 {
+      font-size: 1.5rem; /* Adjusted heading size for smaller screens */
+      margin-bottom: 0.6rem;
+    }
+    .why-choose-me .reason-item .text-content p {
+      font-size: 1.1rem; /* Adjusted paragraph size for smaller screens */
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .why-choose-me {
+      margin: 4rem auto;
+      padding: 2rem 1.5rem;
+    }
+    .why-choose-me h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem; /* Adjusted margin-bottom for heading */
+    }
+    /* .why-choose-me .intro-paragraph { Responsive styles removed } */
+     .why-choose-me .reason-item {
+      padding: 1.5rem 1rem; /* Further reduced padding on mobile */
+      border-radius: 18px; /* Even less rounded on mobile */
+      gap: 0.8rem; /* Adjusted gap for mobile */
+    }
+    .why-choose-me .reason-item .icon {
+      font-size: 2.2rem; /* Further reduced icon size on mobile */
+    }
+    .why-choose-me .reason-item .text-content h3 {
+      font-size: 1.4rem; /* Adjusted heading size on mobile */
+    }
+    .why-choose-me .reason-item .text-content p {
+      font-size: 1rem; /* Further reduced paragraph size on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .why-choose-me {
+      margin: 3rem auto;
+      padding: 1.5rem 1rem;
+      border-radius: 24px; /* Less rounded corners on very small screens */
+    }
+    .why-choose-me h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem; /* Adjusted margin-bottom for heading */
+    }
+    /* .why-choose-me .intro-paragraph { Responsive styles removed } */
+    .why-choose-me .reason-grid { /* Corrected typo in class name */
+      gap: 1.5rem; /* Adjusted gap for very small screens */
+    }
+    .why-choose-me .reason-item {
+      padding: 1.2rem 0.9rem; /* Further reduce padding on very small screens */
+      border-radius: 16px; /* Even less rounded on very small screens */
+      gap: 0.6rem; /* Adjusted gap for very small screens */
+    }
+    .why-choose-me .reason-item .icon {
+      font-size: 2rem; /* Further reduced icon size on very small screens */
+    }
+    .why-choose-me .reason-item .text-content h3 {
+      font-size: 1.3rem; /* Adjusted heading size on very small screens */
+    }
+    .why-choose-me .reason-item .text-content p {
+      font-size: 0.95rem; /* Further reduced paragraph size on very small screens */
+    }
+  }

@@ -1,24 +1,40 @@
-/* Hero Section */
+/* Hero.css - v7 - Improved Code with Semantic Naming, Streamlined Effects, and Comments */
+/* Main CSS file including general styles, hero section, buttons, social links, and responsive design */
+
+/* General RTL and UI/UX Adjustments */
+body {
+  direction: rtl; /* Set text direction to Right-to-Left for Arabic */
+  text-align: right; /* Default text alignment to right */
+  font-family: 'Tajawal', sans-serif; /* Default paragraph font */
+  background-color: #f0f0f5; /* Consistent background color across the site */
+  padding: 0;
+  margin: 0;
+}
+
+/* Link Google Fonts - Elegant & Modern Pairing */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
+
+/* Hero Section Styles */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
-  background: linear-gradient(135deg, #FFF3D6, #FFDCE4, #E8D9FE);
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(120, 120, 130, 0.1);
+  background: #f0f0f5;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px #e0e0e0, -8px -8px 16px #ffffff;
   width: 90vw;
   max-width: 1200px;
   min-height: 70vh;
-  margin: 5vh auto;
-  transition: background 0.5s ease-in-out, box-shadow 0.5s ease;
+  margin: 1vh auto;
   position: relative;
   overflow: hidden;
+  border: none;
 }
 
 .hero:hover {
-  background: linear-gradient(135deg, #FEF6E9, #FFE5EA, #F3EAFE);
-  box-shadow: 0 12px 28px rgba(150, 150, 150, 0.15);
+  background: #f0f0f5c2;
+  box-shadow: 10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff;
 }
 
 .hero::before {
@@ -28,173 +44,209 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 10%, transparent 70%);
   transform: rotate(45deg);
   animation: shimmer 8s infinite linear;
   pointer-events: none;
 }
 
 @keyframes shimmer {
-  0% { transform: rotate(45deg) translateX(-50%); }
-  100% { transform: rotate(45deg) translateX(50%); }
+  0% {
+      transform: rotate(45deg) translateX(-50%);
+  }
+  100% {
+      transform: rotate(45deg) translateX(50%);
+  }
 }
 
+/* Hero Content Styles */
 .hero-content {
   width: 90%;
   display: flex;
-  margin-right: 5%;;
-  flex-direction: column; /* Horizontal layout */
-  justify-content: space-between; /* Space between text and other content */
-  align-items: flex-start; /* Align items to the top */
-  animation: slideIn 0.8s ease-in-out;
+  margin-right: auto;
+  margin-left: 5%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: slideInRTL 0.8s ease-in-out;
   z-index: 1;
 }
 
+/* Hero Text Styles */
 .hero-text {
-  text-align: start; /* Text aligned to the right within its container */
-  max-width: 100%; /* Adjust as needed */
-  margin-bottom: 5rem;;
+  text-align: right;
+  max-width: 100%;
+  margin-bottom: 5rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  color: #ffffff;
+  color: #D2B4BC;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom:1.5rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
   font-family: 'Cairo', sans-serif;
-  text-shadow: 2px 3px 2px rgba(173, 170, 170, 0.625);
+  text-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
 }
 
-.hero-content .tagline {
-  font-size: 1.2rem;
-  color: #868686;
+.tagline { /* Semantic class name - Tagline style */
+  font-size: 1.3rem;
+  color: #424242;
   margin: 0;
-  font-family: 'Cairo', sans-serif;
-  text-shadow: 1px 1px 5px rgba(180, 180, 180, 0.2);
+  font-family: 'Tajawal', sans-serif;
+  text-shadow: 1px 1px 3px rgba(220, 220, 220, 0.2);
+  line-height: 1.7;
 }
 
+/* CTA Buttons Styles */
 .cta-buttons {
   display: flex;
   gap: 1rem;
   width: 100%;
-  text-align: end;
-  flex-direction: row; /* Buttons side by side */
-  justify-content: flex-end; /* Align buttons to the left */
-  margin-top: 1\2rem; /* Space below the text */
+  text-align: start;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 
-/* Buttons */
-.btn-primary, .btn-secondary {
-  padding: 0.85rem 2.2rem;
+/* Button Base Styles - Neumorphic Checkbox Effect */
+.btn-primary,
+.btn-secondary {
+  padding: 0.8rem 2.3rem;
   border: none;
-  border-radius: 14px;
+  border-radius: 16px;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Cairo', sans-serif;
-  box-shadow: 0 6px 14px rgba(120, 120, 130, 0.12);
+  background-color: #f0f0f5; /* Neumorphic Background */
+  color: #424242;
+  box-shadow: -6px -6px 10px rgba(255,255,255,0.8),
+               6px  6px 10px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
+  outline: none;
 }
 
+/* Button Specific Styles - Primary Button */
 .btn-primary {
-  background-color: #E57373;
-  color: #FFF;
+  color: #D2B4BC; /* Dusty Rose for text */
 }
 
+/* Button Specific Styles - Secondary Button */
 .btn-secondary {
-  background-color: #FFCE8E;
-  color: #4B5563;
+  color: #E0BBE4; /* Pale Mauve for text */
 }
 
-/* Button Hover Effects */
-.btn-primary::before, .btn-secondary::before {
+/* Button Hover and Active Effects - Neumorphic */
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: -8px -8px 12px rgba(255,255,255,0.8),
+               8px  8px 12px rgba(0,0,0,0.1);
+  background-color: #f0f0f5c2; /* Slightly darker hover background */
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: inset -4px -4px 6px rgba(255,255,255,0.7),
+               inset 4px  4px 6px rgba(0,0,0,0.1);
+}
+
+/* Button Shimmer Effect */
+.btn-primary::before,
+.btn-secondary::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.077) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s ease;
   pointer-events: none;
 }
 
-.btn-primary:hover::before, .btn-secondary:hover::before {
+.btn-primary:hover::before,
+.btn-secondary::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.btn-primary:hover, .btn-secondary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(125, 125, 125, 0.41);
-}
 
-.btn-primary:hover {
-  background-color: #D65A5A;
-}
-
-.btn-secondary:hover {
-  background-color: #FFB964;
-}
-
-/* Social Links */
+/* Social Links Styles */
 .social-links {
   display: flex;
-  width:90%;
+  width: 90%;
   gap: 2rem;
-  flex-direction: row; /* Icons in a row */
-  justify-content: flex-end; /* Align icons to the left */
-  margin-top: 1rem; /* Space below buttons */
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 
 .social-links a {
-  color: #4B5563;
-  font-size: 1.5rem;
+  color: #757575;
+  font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #E57373;
+  color: #FAEBD7;
+  /* font-family: 'Cairo', sans-serif; Redundant if already inheriting or intended to be same as other headings/buttons */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) { /* Smaller screens */
+@media (max-width: 768px) {
   .hero-content {
-    flex-direction: column; /* Vertical layout */
-    align-items: center; /* Center horizontally */
-    text-align: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   .hero-text {
-    text-align: center; /* Center text on smaller screens */
-    max-width: 100%;
-    margin-bottom: 2rem;
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 2rem;
   }
 
   .cta-buttons {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
-    margin-top: 1rem; /* Adjust margin as needed */
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      text-align: center;
   }
 
   .social-links {
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 1rem; /* Adjust margin as needed */
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 1rem;
   }
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
+@keyframes slideInRTL { /* RTL Adapted Slide-In Animation */
+  from {
+      opacity: 0;
+      transform: translateX(-30px); /* Slide in from left in RTL */
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }

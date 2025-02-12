@@ -1,17 +1,19 @@
 // src/components/Footer.js
 import React from 'react';
-import './css/Footer.css';
+import './css/Footer.css'; // Make sure the CSS import path is correct
 
 const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>&copy; 2023 Your Name. All rights reserved.</p>
-      <ul className="footer-links">
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms of Service</a></li>
-      </ul>
-    </footer>
-  );
+    const currentYear = new Date().getFullYear(); // Get current year dynamically
+
+    return (
+        <footer className="footer">
+            <p>&copy; {currentYear} وجدان الحربي. جميع الحقوق محفوظة.</p> {/* Updated copyright text with dynamic year and Arabic text */}
+            <ul className="footer-links">
+                <li><a href="#privacy">سياسة الخصوصية</a></li> {/* Privacy Policy in Arabic */}
+                <li><a href="#terms">شروط الخدمة</a></li> {/* Terms of Service in Arabic */}
+            </ul>
+        </footer>
+    );
 };
 
 export default Footer;

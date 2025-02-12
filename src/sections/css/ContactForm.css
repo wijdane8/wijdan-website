@@ -1,0 +1,213 @@
+/* ContactForm.css - Styles for the Contact Form with Animated Button */
+
+.contact-form {
+      background-color: #f8f8ff;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 5px 5px 10px #e0e0e0, -5px -5px 10px #ffffff;
+      margin-bottom: 2rem;
+      text-align: right;
+      width: 100%;
+      max-width: 800px;
+    }
+    
+    .contact-form h3 {
+      font-size: 2rem;
+      color: #D2B4BC; /* Dusty Rose - matches headings */
+      font-family: 'Cairo', sans-serif;
+      margin-bottom: 1.5rem;
+      text-shadow: none;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.1rem;
+      color: #555; /* Dark gray - for labels */
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e8e8e8;
+      border-radius: 12px;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1rem;
+      color: #424242; /* Dark gray - input text */
+      background-color: #f0f0f5; /* Light background - form fields */
+      box-shadow: inset 2px 2px 5px #e0e0e0, inset -2px -2px 5px #ffffff;
+      transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #D2B4BC; /* Dusty Rose - focus border */
+      box-shadow: 3px 3px 7px #d0d0d0, -3px -3px 7px #ffffff;
+      outline: none;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+    }
+    
+    /* Button Container - Center the button */
+    .button-container {
+      text-align: center; /* Center the button horizontally */
+    }
+    
+    
+    /* Animated Button Styles */
+    .submit-button {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      display: inline-flex; /* Changed to inline-flex for better alignment */
+      align-items: center;
+      justify-content: center; /* Center content inside button */
+      position: relative; /* For absolute positioning of pseudo-element */
+      overflow: hidden; /* Clip overflow for animation */
+    
+      background: #D2B4BC; /* Solid Dusty Rose background - Replaced gradient */
+      color: white;
+      outline: none;
+      border: 2px solid #D2B4BC; /* Added border to match background */
+      border-radius: 32px; /* More rounded corners to match design */
+      font-weight: 600;
+      font-size: 1.2rem; /* Adjusted font size to match */
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif; /* Match font family */
+    
+      padding: 0.8rem 2rem; /* Adjusted padding to match design */
+    
+      box-shadow: 4px 4px 8px #e0e0e0, -4px -4px 8px #ffffff; /* Kept shadow */
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Added transition for color and border */
+    }
+    
+    .submit-button svg {
+      height: 20px; /* Adjusted svg size */
+      width: 20px; /* Adjusted svg size */
+      margin-left: 10px;
+      fill: white;
+      transition: transform 0.5s ease; /* Smooth rotation transition */
+    }
+    
+    .submit-button .done {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0; /* Initially hidden */
+      color: white; /* Ensure "Done!" text is white */
+    }
+    
+    .submit-button .send {
+      opacity: 1; /* Initially visible */
+      color: white; /* Ensure "Send" text is white */
+      transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for send text */
+      padding: 0 5px;
+    }
+    
+    
+    .submit-button:hover {
+      background-color: #C2A4AC; /* Darker Dusty Rose on hover */
+      border-color: #C2A4AC; /* Match border on hover */
+      color: white; /* Keep text white on hover */
+      transform: scale(1.03); /* Slight scale up on hover */
+      box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #ffffff;
+    }
+    
+    .submit-button:hover::before {
+      left: 100%;
+    }
+    
+    .submit-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, white, transparent); /* White animation gradient */
+      transition: 0.7s; /* Adjusted transition duration */
+      z-index: 1; /* Ensure animation is above button background */
+    }
+    
+    
+    .submit-button:focus {
+      outline: none;
+      box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #ffffff, 0 0 0 2px #D2B4BC;
+    }
+    
+    
+    /* Responsive Design - Adjustments for button centering and form layout if needed */
+    @media (max-width: 768px) {
+      .contact-form {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+      }
+    
+      .contact-form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+      }
+    
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+    
+      .form-group label {
+        font-size: 1rem;
+      }
+    
+      .form-group input,
+      .form-group textarea {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+        border-radius: 10px;
+      }
+    
+      .submit-button {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+        border-radius: 24px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-form {
+        padding: 1rem;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+      }
+    
+      .contact-form h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+    
+      .form-group {
+        margin-bottom: 1rem;
+      }
+    
+      .form-group label {
+        font-size: 0.9rem;
+      }
+    
+      .form-group input,
+      .form-group textarea {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        border-radius: 8px;
+      }
+    
+      .submit-button {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+        border-radius: 20px;
+      }
+    }

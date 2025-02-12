@@ -1,0 +1,131 @@
+/* Accordion.css - Styles for Accordion Component - v2 - Shrink and Expand Animation */
+
+.accordion-container {
+  width: 100%; /* Adjusted width to fill slide-content */
+  min-width: auto; /* Removed min-width restriction */
+  margin: 0; /* Removed auto margin */
+  border-radius: 24px; /* Adjusted border-radius */
+  box-shadow: 5px 5px 10px #e0e0e0, -5px -5px 10px #ffffff; /* Neumorphic shadow for accordion */
+  background-color: #f8f8ff; /* Lighter background for accordion */
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  direction: rtl; /* Set direction to rtl for Arabic text in accordion */
+}
+
+.accordion-container:hover {
+  box-shadow: 6px 6px 12px #d0d0d0, -6px -6px 12px #ffffff; /* Adjusted hover shadow for accordion */
+}
+
+.accordion-container div {
+  border-bottom: 2px solid #f0f0f5; /* Lighter border color for accordion sections */
+  transition: all 0.3s ease-in-out;
+}
+
+.summary {
+  font-family: "Cairo", sans-serif;
+  text-transform: none; /* Removed uppercase text transform */
+  cursor: pointer;
+  line-height: 1.5; /* Adjusted line height for summary */
+  padding: 1.2rem 1.5rem; /* Adjusted padding for summary */
+  color: #d2b4bc; /* Dusty Rose - Summary text color */
+  text-shadow: none; /* Removed text-shadow from summary */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between summary text and icon */
+  transition: background-color 0.3s ease-in-out; /* Added background transition */
+  font-size: 1.3rem; /* Adjusted font size for summary */
+  font-weight: 600; /* Adjusted font weight for summary */
+}
+
+.summary:hover {
+  background-color: #f0f0f5; /* Lighter background on summary hover */
+}
+
+.toggle-icon {
+  margin-left: 0;
+  margin-right: 1rem;
+  font-weight: 700;
+  font-size: 1em;
+  min-width: 20px;
+  transition: transform 0.3s ease-in-out;
+  color: #d2b4bc; /* Dusty Rose - Icon color */
+}
+
+.active .toggle-icon {
+  transform: rotate(90deg); /* Rotate icon when accordion is active */
+}
+
+.inactive .toggle-icon {
+  transform: rotate(0deg);
+}
+
+.folding-pannel.inactive {
+  opacity: 0;
+  height: 0;
+  padding-top: 0; /* Set padding to 0 when inactive */
+  padding-bottom: 0; /* Set padding to 0 when inactive */
+  margin: 0;
+}
+
+.folding-pannel {
+     display: flex; /* Keep display: flex; */
+     overflow: hidden;
+     transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+     line-height: 1.6;
+     background-color: #f8f8ff;
+     padding: 1.5rem;
+     color: #606060;
+     font-family: 'Tajawal', sans-serif;
+     font-size: 1.15rem;
+     text-align: right;
+     flex-direction: column; /* Keep flex-direction: column; */
+     align-items: center; /* Change align-items to center to horizontally align content */
+  }
+  
+  .folding-pannel.active {
+    max-height: 1000px; /* Adjust this value as needed */
+    padding: 1.5rem;
+  }
+  
+  .folding-pannel.inactive {
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+.active .summary {
+  border-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+  background-color: #f0f0f5; /* Keep background on active summary */
+}
+
+
+/* Project Interface Image Styles */
+.project-interface-image {
+  width: 100%; /* Image takes full width of the panel */
+  max-width: 500px; /* Adjust max width as needed */
+  border-radius: 12px;
+  margin-bottom: 1.5rem; /* Space below the image */
+  box-shadow: 4px 4px 8px #e0e0e0, -4px -4px 8px #ffffff; /* Subtle image shadow */
+}
+
+/* Project Link Button Styles */
+.project-link-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #d2b4bc; /* Dusty Rose button color */
+  color: #fff; /* White text color */
+  font-family: "Cairo", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 24px; /* Rounded button corners */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 3px 3px 6px #e0e0e0, -3px -3px 6px #ffffff; /* Button shadow */
+}
+
+.project-link-button:hover {
+  background-color: #c2a4ac; /* Darker Dusty Rose on hover */
+  transform: scale(1.05); /* Slight scale up on hover */
+  box-shadow: 4px 4px 8px #d0d0d0, -4px -4px 8px #ffffff; /* Adjusted hover shadow */
+}
