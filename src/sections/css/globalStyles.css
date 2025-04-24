@@ -1,0 +1,127 @@
+/* src/globalStyles.css */
+
+:root {
+   /* Base Colors */
+   --primary-background: #f0f4f7; /* Very Light Blue-Gray */
+   --hover-background: #e1e5e8; /* Slightly darker Blue-Gray for hover */
+   --primary-button-background: #a3bac3; /* Medium Blue-Gray for primary buttons */
+   --secondary-button-background: #b2bec3; /* Slightly lighter Medium Blue-Gray for secondary buttons */
+   --button-hover-dusty-rose: #81a2af; /* Darker Blue-Gray for primary button hover */
+   --button-hover-pale-mauve: #90a9b9; /* Slightly darker Medium Blue-Gray for secondary button hover */
+   --heading-text-color: #2c3e50; /* Dark Blue-Gray for headings */
+   --primary-text-color: #34495e; /* Darker Blue-Gray for primary text */
+   --social-links-color: #4a6572; /* Medium-Dark Blue-Gray for social links */
+   --social-links-hover-color: #2c3e50; /* Dark Blue-Gray for social links hover */
+  
+   /* Neutral Colors */
+   --secondary-text-color: #5e7a87; /* Lighter Blue-Gray for secondary text */
+   --light-shadow-color: rgba(111, 143, 159, 0.3); /* Blue-Gray with transparency for light shadows */
+   --white-shadow-color: #FFFFFF;
+   --gradient-light-grey: #cdd2d5; /* Light Blue-Gray for gradients */
+   --paragraph-text-color: #6e8a97; /* Medium Blue-Gray for paragraph text */
+   --off-white-background: #f0f4f7;
+   --marquee-text-color: #556b74; /* Darker Medium Blue-Gray for marquee text */
+   --lighter-shadow-color: rgba(111, 143, 159, 0.2); /* Lighter Blue-Gray for subtle shadows */
+   --skill-tag-hover-background: #e6e9eb; /* Very Light Blue-Gray for skill tag hover */
+   --skill-tag-active-background: #d7dce0; /* Light Blue-Gray for active skill tags */
+  
+   /* Slide Arrows */
+   --slide-arrow-background: #a3bac3; /* Medium Blue-Gray for slide arrows */
+   --slide-arrow-text-color: #FFFFFF; /* White for arrow text */
+   --slide-arrow-hover-background: #81a2af; /* Darker Blue-Gray for hover */
+  
+   /* Certificates */
+   --certificate-dashed-border-color: #cdd2d5; /* Light Blue-Gray for dashed borders */
+   --certificate-highlight-color: #b2bec3; /* Slightly lighter Medium Blue-Gray for certificate highlights */
+  
+   /* Form Elements */
+   --form-background-color: #f0f4f7;
+   --form-box-shadow-light: rgba(111, 143, 159, 0.3);
+   --form-box-shadow-white: #FFFFFF;
+   --form-heading-color: #2c3e50;
+   --form-label-color: var(--secondary-text-color);
+   --form-input-text-color: var(--primary-text-color);
+   --form-field-background: #e6e9eb;
+   --form-field-border-color: #d7dce0;
+   --form-field-focus-border-color: #a3bac3;
+   --button-solid-background: #a3bac3;
+   --button-text-color: #FFFFFF;
+   --button-hover-solid-background: #81a2af;
+   --button-focus-shadow-color: rgba(111, 143, 159, 0.5); /* Stronger Blue-Gray for focus shadow */
+  
+   /* Hero Section */
+   --hero-background: #f0f4f7;
+   --hero-hover-background: #e1e5e8;
+   --hero-box-shadow-light: rgba(111, 143, 159, 0.3);
+   --hero-box-shadow-white: #FFFFFF;
+   --hero-hover-box-shadow-light: rgba(111, 143, 159, 0.4); /* Slightly stronger Blue-Gray for hover shadows */
+  
+   /* Portfolio Section */
+   --portfolio-background: #f0f4f7;
+   --portfolio-hover-background: #e1e5e8;
+   --portfolio-box-shadow-light: rgba(111, 143, 159, 0.3);
+   --portfolio-box-shadow-white: #FFFFFF;
+   --portfolio-hover-box-shadow-light: rgba(111, 143, 159, 0.4);
+   --portfolio-section-text-color: var(--primary-text-color);
+   --portfolio-heading-color: #2c3e50;
+   --portfolio-paragraph-text-color: var(--paragraph-text-color);
+   --portfolio-list-item-color: var(--secondary-text-color);
+   --accordion-background: #f0f4f7;
+   --accordion-box-shadow-light: var(--form-box-shadow-light);
+   --accordion-box-shadow-white: var(--form-box-shadow-white);
+   --accordion-border-color: #e6e9eb;
+   --accordion-summary-color: #2c3e50;
+   --accordion-summary-hover-background: #e1e5e8;
+   --accordion-toggle-icon-color: #2c3e50;
+   --accordion-panel-background: var(--off-white-background);
+   --accordion-panel-text-color: var(--paragraph-text-color);
+   --project-image-box-shadow-light: var(--form-box-shadow-light);
+   --project-image-box-shadow-white: var(--form-box-shadow-white);
+   --project-link-button-background: #a3bac3;
+   --project-link-button-text-color: #FFFFFF;
+   --project-link-button-hover-background: #81a2af;
+   --portfolio-highlight-color: #a3bac3;
+  
+   /* Why Choose Me Section */
+   --why-choose-me-background: #f0f4f7;
+   --why-choose-me-box-shadow-light: var(--light-shadow-color);
+   --why-choose-me-box-shadow-white: var(--white-shadow-color);
+   --why-choose-me-text-color: var(--primary-text-color);
+   --why-choose-me-heading-color: #2c3e50;
+   --reason-item-background: #e1e5e8;
+   --reason-item-box-shadow-light: var(--light-shadow-color);
+   --reason-item-box-shadow-white: var(--white-shadow-color);
+   --reason-item-hover-box-shadow-light: var(--gradient-light-grey);
+   --reason-item-paragraph-color: var(--secondary-text-color);
+  
+   /* Footer */
+   --footer-background: #f0f4f7;
+   --footer-text-color: var(--secondary-text-color);
+   --footer-box-shadow-light: var(--form-box-shadow-light);
+   --footer-box-shadow-white: var(--form-box-shadow-white);
+   --footer-link-hover-color: #2c3e50;
+  
+   /* Navbar */
+   --navbar-background: #f0f4f7;
+   --navbar-box-shadow-light: var(--light-shadow-color);
+   --navbar-box-shadow-white: var(--white-shadow-color);
+   --navbar-logo-color: #2c3e50;
+   --navbar-logo-text-shadow: #e6e9eb;
+   --navbar-links-color: var(--primary-text-color);
+   --navbar-links-hover-color: #2c3e50;
+   --navbar-links-hover-box-shadow-light: var(--light-shadow-color);
+   --navbar-links-hover-box-shadow-white: var(--white-shadow-color);
+   --navbar-toggle-color: #2c3e50;
+   --navbar-mobile-menu-background: #f0f4f7E0;
+   --navbar-scrolled-background: #f0f4f7;
+   --navbar-scrolled-box-shadow: rgba(111, 143, 159, 0.1); /* Subtle Blue-Gray shadow for scrolled navbar */
+   --navbar-scrolled-links-color: var(--paragraph-text-color);
+  
+   /* App Level */
+   --body-text-color: #34495e;
+   --link-hover-color: #2c3e50;
+   --next-arrow-background: #a3bac3;
+   --next-arrow-text-color: #FFFFFF;
+   --next-arrow-hover-background: #81a2af;
+   --next-arrow-hover-box-shadow: rgba(111, 143, 159, 0.5);
+  }

@@ -4,9 +4,9 @@ Color Palette:
 
 Primary Background: #f0f0f5 (Light, off-white background for sections like Hero)
 Hover Background: #f0f0f5c2 (Slightly darker, semi-transparent off-white for hover effects)
-Primary Button Background: #D2B4BC (Dusty Rose - a soft, muted pink)
-Secondary Button Background: #E0BBE4 (Pale Mauve - a light, pastel purple)
-Button Hover Backgrounds: #c2a4ac (Slightly darker Dusty Rose) and #d0ace4 (Slightly darker Pale Mauve)
+Primary Button Background:rgb(172, 72, 99) (Dusty Rose - a soft, muted pink)
+Secondary Button Background:rgb(72, 177, 93) (Pale Mauve - a light, pastel purple)
+Button Hover Backgrounds: #c2a4ac (Slightly darker Dusty Rose) andrgb(172, 228, 176) (Slightly darker Pale Mauve)
 Heading Text Color: #D2B4BC (Dusty Rose - same as primary button)
 Tagline & Primary Text Color: #424242 (Dark Gray - for good contrast)
 Social Links Color: #757575 (Medium Gray)

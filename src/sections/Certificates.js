@@ -3,8 +3,9 @@ import './css/Certificates.css';
 
 const Certificates = () => {
   return (
-    <div className="certificates-section">
-      <div className="slide-content">
+    <section id="certificate" className="certificates-section">
+      <div className="container">
+      <div className="certificate-content">
         <h2>📜 أهم الدورات والشهادات</h2>
         <ul>
           <li>
@@ -30,6 +31,7 @@ const Certificates = () => {
         </ul>
       </div>
     </div>
+    </section>
   );
 };
 

@@ -1,23 +1,23 @@
-/* Contact.css - Styles for the Contact Section */
+/* Contact.css - Styles for the Contact Section - v2 - Color Variables */
 
 .contact {
   width: 95vw;
   max-width: 1400px;
   margin: 5rem auto;
   padding: 3rem 2rem;
-  background-color: #f0f0f5;
+  background-color: var(--primary-background); /* Primary Background Color Variable */
   border-radius: 32px;
-  box-shadow: 7px 7px 14px #e0e0e0, -7px -7px 14px #ffffff;
+  box-shadow: 7px 7px 14px var(--light-shadow-color), -7px -7px 14px var(--white-shadow-color); /* Shadow Color Variables */
   position: relative;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   direction: rtl;
-  color: #424242;
+  color: var(--primary-text-color); /* Primary Text Color Variable */
   text-align: center; /* Center align text in the section */
 }
 
 .contact:hover {
-  box-shadow: 8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px var(--lighter-shadow-color), -8px -8px 16px var(--white-shadow-color); /* Hover Shadow Color Variables (using lighter shadow and white shadow) */
   transform: translateY(-5px);
 }
 
@@ -27,7 +27,7 @@
   animation: fadeIn 0.8s ease-in-out;
   z-index: 1;
   padding: 3rem;
-  background-color: #f0f0f5;
+  background-color: var(--primary-background); /* Primary Background Color Variable */
   border-radius: 32px;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@
 
 .slide-content h2 {
   font-size: 2.8rem;
-  color: #D2B4BC;
+  color: var(--heading-text-color); /* Heading Text Color Variable */
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 2rem;
@@ -49,14 +49,14 @@
 }
 
 .slide-content h2:hover {
-  color: #C2A4AC;
+  color: var(--button-hover-dusty-rose); /* Button Hover Dusty Rose Color Variable for hover effect */
   transform: scale(1.03);
 }
 
 .slide-content p {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #606060;
+  color: var(--paragraph-text-color); /* Paragraph Text Color Variable */
   line-height: 1.7;
   margin-bottom: 2rem;
   font-family: 'Tajawal', sans-serif;
@@ -74,19 +74,19 @@
 
 .contact-info p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--secondary-text-color); /* Secondary Text Color Variable */
   font-family: 'Tajawal', sans-serif;
   margin-bottom: 0; /* Remove default paragraph margin in contact info */
 }
 
 .contact-info a {
-  color: #D2B4BC;
+  color: var(--heading-text-color); /* Heading Text Color Variable for links */
   text-decoration: none;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
-  color: #C2A4AC;
+  color: var(--button-hover-dusty-rose); /* Button Hover Dusty Rose Color Variable for link hover effect */
   transform: scale(1.05);
 }
 

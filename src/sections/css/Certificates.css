@@ -1,16 +1,4 @@
-/* Certificates.css - v6 - Complete file with Neumorphic Buttons and General Styles */
-/* Combines Certificates section styles with general body and button styles for easier implementation if using separate CSS files */
-
-/* General RTL and UI/UX Adjustments & Font Imports (consistent with Hero.css) */
-body {
-    direction: rtl;
-    text-align: right;
-    font-family: 'Tajawal', sans-serif;
-    background-color: #f0f0f5; /* Consistent background color across the site */
-    padding: 0;
-    margin: 0;
-}
-
+/* Certificates.css - v3 - Using Color Variables */
 /* Link Google Fonts - Elegant & Modern Pairing */
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
 
@@ -20,22 +8,24 @@ body {
     width: 95vw;
     max-width: 1400px;
     margin: 5rem auto;
-    background-color: #f0f0f5; /* Confirmed Background Color - consistent with body */
-    color: #4a4a4a;
+    background-color: var(--primary-background); /* Primary Background Color Variable */
+    color: var(--secondary-text-color); /* Secondary Text Color Variable */
     border-radius: 32px;
-    box-shadow: 10px 10px 20px #e0e0e0, -10px -10px 20px #ffffff;
-    padding: 4rem 3rem;
+    /* Softer, more subtle neumorphic shadow */
+    box-shadow: 6px 6px 12px var(--light-shadow-color), -6px -6px 12px var(--white-shadow-color); /* Shadow Color Variables */
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: visible;
     direction: rtl;
-    border: 1px solid #eee;
 }
 
-.slide-content {
+.certificate-content {
     padding: 2.5rem;
 }
 
-.slide-content h2 {
+.certificate-content h2 {
     font-size: 3.75rem;
-    color: #D2B4BC; /* Confirmed Heading Color: Dusty Rose */
+    color: var(--heading-text-color); /* Confirmed Heading Color: Dusty Rose - Heading Text Color Variable */
     margin-bottom: 2.5rem;
     position: relative;
     line-height: 1.2;
@@ -45,7 +35,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-.slide-content h2::after {
+.certificate-content h2::after {
     content: '';
     position: absolute;
     bottom: -1.2rem;
@@ -53,34 +43,34 @@ body {
     transform: translateX(50%);
     width: 90px;
     height: 4px;
-    background: #D2B4BC; /* Confirmed Heading Underline Color: Dusty Rose */
+    background: var(--heading-text-color); /* Confirmed Heading Underline Color: Dusty Rose - Heading Text Color Variable */
     border-radius: 3px;
 }
 
-.slide-content ul {
+.certificate-content ul {
     list-style: none;
     padding: 0;
     margin-top: 2.5rem;
 }
 
-.slide-content li {
+.certificate-content li {
     font-family: 'Tajawal', sans-serif;
     font-size: 1.3rem;
     line-height: 2.1;
     margin-bottom: 1.2rem;
     padding-bottom: 1.2rem;
-    border-bottom: 1.5px dashed #e2d8e8;
-    color: #5f5f5f;
+    border-bottom: 1.5px dashed var(--certificate-dashed-border-color); /* Dashed border color variable */
+    color: var(--paragraph-text-color); /* Paragraph text color variable */
 }
 
-.slide-content li:last-child {
+.certificate-content li:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.slide-content li span.highlight {
-    color: #aa7ab7;
+.certificate-content li span.highlight {
+    color: var(--certificate-highlight-color); /* Certificate highlight color variable */
     font-weight: 600;
 }
 
@@ -95,10 +85,10 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Cairo', sans-serif;
-    background-color: #f0f0f5; /* Neumorphic Background - consistent with body and sections */
-    color: #424242;
+    background-color: var(--primary-background); /* Neumorphic Background - consistent with body and sections - Primary Background Color Variable */
+    color: var(--primary-text-color); /* Primary Text Color Variable */
     box-shadow: -6px -6px 10px rgba(255,255,255,0.8),
-                 6px  6px 10px rgba(0,0,0,0.1);
+                6px  6px 10px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
     text-transform: uppercase;
@@ -106,29 +96,29 @@ body {
 }
 
 .btn-primary {
-    background-color: #f0f0f5; /* Neumorphic Background */
-    color: #D2B4BC; /* Dusty Rose for text */
+    background-color: var(--primary-background); /* Neumorphic Background - Primary Background Color Variable */
+    color: var(--heading-text-color); /* Dusty Rose for text - Heading Text Color Variable */
 }
 
 .btn-secondary {
-    background-color: #f0f0f5; /* Neumorphic Background */
-    color: #E0BBE4; /* Pale Mauve for text */
+    background-color: var(--primary-background); /* Neumorphic Background - Primary Background Color Variable */
+    color: var(--button-hover-pale-mauve); /* Pale Mauve for text - Button Hover Pale Mauve Color Variable */
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
     transform: translateY(-3px);
     box-shadow: -8px -8px 12px rgba(255,255,255,0.8),
-                 8px  8px 12px rgba(0,0,0,0.1);
-    background-color: #f0f0f5c2;
+                8px  8px 12px rgba(0,0,0,0.1);
+    background-color: var(--hover-background); /* Hover Background Color Variable */
 }
 
 .btn-primary:active,
 .btn-secondary:active {
     transform: translateY(0);
     box-shadow: inset -4px -4px 6px rgba(255,255,255,0.7),
-                 inset 4px  4px 6px rgba(0,0,0,0.1);
-    background-color: #f0f0f5;
+                inset 4px  4px 6px rgba(0,0,0,0.1);
+    background-color: var(--primary-background); /* Primary Background Color Variable */
 }
 
 .btn-primary::before,
@@ -151,13 +141,13 @@ body {
 }
 
 
-/* Responsive Design for Certificates Section - v6 - Consistent with Main CSS Breakpoints */
+/* Responsive Design for Certificates Section - v7 - Consistent with Main CSS Breakpoints - Color Variables */
 @media (max-width: 1200px) {
-    .slide-content li {
+    .certificate-content li {
         font-size: 1.25rem;
         line-height: 2;
     }
-    .slide-content h2 {
+    .certificate-content h2 {
         font-size: 3.4rem;
     }
 }
@@ -167,17 +157,17 @@ body {
         padding: 3.5rem 2.5rem;
         margin: 4.5rem auto;
     }
-    .slide-content {
+    .certificate-content {
         padding: 2rem;
     }
-    .slide-content h2 {
+    .certificate-content h2 {
         font-size: 3rem;
         margin-bottom: 2rem;
     }
-    .slide-content ul {
+    .certificate-content ul {
         margin-top: 2rem;
     }
-    .slide-content li {
+    .certificate-content li {
         font-size: 1.15rem;
         line-height: 1.9;
         margin-bottom: 1rem;
@@ -191,17 +181,17 @@ body {
         margin: 4rem auto;
         border-radius: 24px;
     }
-    .slide-content {
+    .certificate-content {
         padding: 1.8rem;
     }
-    .slide-content h2 {
+    .certificate-content h2 {
         font-size: 2.5rem;
         margin-bottom: 1.8rem;
     }
-    .slide-content ul {
+    .certificate-content ul {
         margin-top: 1.8rem;
     }
-    .slide-content li {
+    .certificate-content li {
         font-size: 1.1rem;
         line-height: 1.8;
         margin-bottom: 0.9rem;
@@ -215,17 +205,17 @@ body {
         margin: 3.5rem auto;
         border-radius: 20px;
     }
-    .slide-content {
+    .certificate-content {
         padding: 1.2rem;
     }
-    .slide-content h2 {
+    .certificate-content h2 {
         font-size: 2.1rem;
         margin-bottom: 1.2rem;
     }
-    .slide-content ul {
+    .certificate-content ul {
         margin-top: 1.5rem;
     }
-    .slide-content li {
+    .certificate-content li {
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 0.7rem;

@@ -1,16 +1,17 @@
 /* src/components/Footer.css */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 2rem; /* Increased padding for better spacing */
-  background-color: #f8f8ff; /* Lighter background color to match the design */
-  color: #555; /* Darker text color for better contrast */
+  padding: 2rem 7rem; /* Increased padding for better spacing */
+  background-color: var(--footer-background); /* Lighter background color to match the design - Color Variable */
+  color: var(--footer-text-color); /* Darker text color for better contrast - Color Variable */
   border-radius: 24px; /* Rounded corners to align with form and other sections */
-  box-shadow: inset 5px 5px 10px #e0e0e0, inset -5px -5px 10px #ffffff; /* Neumorphic inset shadow for subtle depth */
+  box-shadow: inset 5px 5px 10px var(--footer-box-shadow-light), inset -5px -5px 10px var(--footer-box-shadow-white); /* Neumorphic inset shadow for subtle depth - Color Variables */
   margin-top: 2rem; /* Add margin at the top to separate from content */
   font-family: 'Tajawal', sans-serif; /* Consistent font family */
   font-size: 0.9rem; /* Slightly reduced font size for footer text */
+  
 }
 
 .footer-links {
@@ -22,13 +23,13 @@
 }
 
 .footer-links a {
-  color: #555; /* Match link color with text color */
+  color: var(--footer-text-color); /* Match link color with text color - Color Variable */
   text-decoration: none;
   transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
 
 .footer-links a:hover {
-  color: #D2B4BC; /* Dusty Rose - Hover color to match website theme */
+  color: var(--footer-link-hover-color); /* Dusty Rose - Hover color to match website theme - Color Variable */
 }
 
 /* Media Query for smaller screens */

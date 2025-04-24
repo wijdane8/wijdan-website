@@ -6,7 +6,7 @@
   margin: 0; /* Removed auto margin */
   border-radius: 24px; /* Adjusted border-radius */
   box-shadow: 5px 5px 10px #e0e0e0, -5px -5px 10px #ffffff; /* Neumorphic shadow for accordion */
-  background-color: #f8f8ff; /* Lighter background for accordion */
+  background-color: #fdfdfd; /* Lighter background for accordion */
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   direction: rtl; /* Set direction to rtl for Arabic text in accordion */
@@ -38,7 +38,7 @@
 }
 
 .summary:hover {
-  background-color: #f0f0f5; /* Lighter background on summary hover */
+  background-color: #ffffff; /* Lighter background on summary hover */
 }
 
 .toggle-icon {
@@ -72,7 +72,7 @@
      overflow: hidden;
      transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
      line-height: 1.6;
-     background-color: #f8f8ff;
+     background-color: #ffffff;
      padding: 1.5rem;
      color: #606060;
      font-family: 'Tajawal', sans-serif;
@@ -97,7 +97,7 @@
 .active .summary {
   border-color: transparent;
   transition: border-color 0.3s ease-in-out;
-  background-color: #f0f0f5; /* Keep background on active summary */
+  background-color: #f4f4f4; /* Keep background on active summary */
 }
 
 

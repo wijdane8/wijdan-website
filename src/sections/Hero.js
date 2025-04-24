@@ -33,6 +33,7 @@ const Hero = () => {
      >
       <i className="fab fa-github"></i>
      </a>
+    
     </div>
    </div>
   </section>

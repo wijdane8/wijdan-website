@@ -53,9 +53,9 @@ const About = () => {
               استشارة، فأنا هنا لمساعدتك! <span className="emoji"></span>
             </p>
           </div>
-          <div className="about-image">
+          {/* <div className="about-image">
             <AboutIcon />
-          </div>
+          </div> */}
         </div>
         <h2 className="skills-grid-headline">التقنيات والمهارات التي أتقنها</h2>
         <div className="skills-grid">

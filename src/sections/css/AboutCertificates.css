@@ -1,76 +1,79 @@
-/* Slider Controls */
+/* AboutCertificates.css - v3 - Using Color Variables */
+/* Slider Controls - Color Variables Applied */
 .slider-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 10;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+.slider-section {
+  direction: rtl; /* Important for RTL layout */
+}
+.slide-arrow {
+  background: var(--slide-arrow-background); /* Slide arrow background color variable - Dusty Rose */
+  color: var(--slide-arrow-text-color); /* Slide arrow text color variable - white */
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 6px var(--light-shadow-color), -3px -3px 6px var(--white-shadow-color); /* Shadow color variables */
+}
+
+.slide-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slide-arrow:hover:not(:disabled) {
+  background: var(--slide-arrow-hover-background); /* Slide arrow hover background color variable - Dusty Rose Hover */
+  transform: scale(1.1);
+}
+
+.slide-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.slide-indicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--slide-arrow-background); /* Slide indicator background color variable - Dusty Rose */
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.slide-indicators span.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    min-height: 50vh;
   }
-  
+
+  .slide {
+    padding: 1rem;
+  }
+
   .slide-arrow {
-    background: #D2B4BC;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 3px 3px 6px #e0e0e0, -3px -3px 6px #ffffff;
+    width: 35px;
+    height: 35px;
   }
-  
-  .slide-arrow:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  .slide-arrow:hover:not(:disabled) {
-    background: #C2A4AC;
-    transform: scale(1.1);
-  }
-  
-  .slide-indicators {
-    display: flex;
-    gap: 8px;
-  }
-  
+
   .slide-indicators span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #D2B4BC;
-    opacity: 0.4;
-    transition: all 0.3s ease;
+    width: 10px;
+    height: 10px;
   }
-  
-  .slide-indicators span.active {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .slider-container {
-      min-height: 50vh;
-    }
-    
-    .slide {
-      padding: 1rem;
-    }
-  
-    .slide-arrow {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .slide-indicators span {
-      width: 10px;
-      height: 10px;
-    }
-  }
+}

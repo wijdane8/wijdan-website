@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import "./App.css";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 import WhyChooseMe from "./sections/WhyChooseMe";
-import AboutCertificate from "./sections/AboutCertificate"
+import AboutCertificate from "./sections/AboutCertificate";
+import './sections/css/globalStyles.css';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);

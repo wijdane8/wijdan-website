@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Portfolio.css";
-import Accordion from './Accordion' // Import the Accordion component
+import Accordion from './Accordion/Accordion' // Import the Accordion component
 
 // Import project images (Make sure these images are in your project's `public/images/portfolio/` or similar directory)
 import project1Image from './images/pexels-padrinan-19670.jpg';

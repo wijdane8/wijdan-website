@@ -7,11 +7,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <p>&copy; {currentYear} وجدان الحربي. جميع الحقوق محفوظة.</p> {/* Updated copyright text with dynamic year and Arabic text */}
-            <ul className="footer-links">
-                <li><a href="#privacy">سياسة الخصوصية</a></li> {/* Privacy Policy in Arabic */}
-                <li><a href="#terms">شروط الخدمة</a></li> {/* Terms of Service in Arabic */}
-            </ul>
+            <p>وجدان الحربي. جميع الحقوق محفوظة.&copy; {currentYear} </p> {/* Updated copyright text with dynamic year and Arabic text */}
         </footer>
     );
 };
