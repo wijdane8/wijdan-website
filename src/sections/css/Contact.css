@@ -1,170 +1,146 @@
-/* Contact.css - Styles for the Contact Section - v2 - Color Variables */
-
+/* Modern Professional Contact Section */
 .contact {
-  width: 95vw;
-  max-width: 1400px;
+  width: 96vw;
+  max-width: 1200px;
   margin: 5rem auto;
-  padding: 3rem 2rem;
-  background-color: var(--primary-background); /* Primary Background Color Variable */
-  border-radius: 32px;
-  box-shadow: 7px 7px 14px var(--light-shadow-color), -7px -7px 14px var(--white-shadow-color); /* Shadow Color Variables */
+  padding: 3.5rem 2.5rem;
+  background: var(--card-background, #fff);
+  border-radius: var(--border-radius-lg, 24px);
+  box-shadow: var(--box-shadow-lg, 0 4px 32px rgba(24,48,80,0.08));
   position: relative;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.2s, transform 0.2s;
   overflow: hidden;
-  direction: rtl;
-  color: var(--primary-text-color); /* Primary Text Color Variable */
-  text-align: center; /* Center align text in the section */
+  color: var(--primary-text-color, #222b45);
+  text-align: center;
 }
 
 .contact:hover {
-  box-shadow: 8px 8px 16px var(--lighter-shadow-color), -8px -8px 16px var(--white-shadow-color); /* Hover Shadow Color Variables (using lighter shadow and white shadow) */
-  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover, 0 8px 32px rgba(24,48,80,0.14));
+  transform: translateY(-5px) scale(1.01);
 }
 
 .slide-content {
   width: 100%;
-  margin: 0;
-  animation: fadeIn 0.8s ease-in-out;
-  z-index: 1;
   padding: 3rem;
-  background-color: var(--primary-background); /* Primary Background Color Variable */
-  border-radius: 32px;
+  background: var(--primary-background, #f7fafd);
+  border-radius: var(--border-radius-lg, 24px);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
   justify-content: center;
-  height: auto;
-  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.8s cubic-bezier(.25,.8,.25,1);
 }
 
 .slide-content h2 {
-  font-size: 2.8rem;
-  color: var(--heading-text-color); /* Heading Text Color Variable */
+  font-size: 2.5rem;
+  color: var(--heading-text-color, #183153);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 2rem;
-  font-family: 'Cairo', sans-serif;
-  text-shadow: none;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-family: 'Montserrat', 'Cairo', sans-serif;
+  transition: color 0.2s, transform 0.18s;
 }
 
 .slide-content h2:hover {
-  color: var(--button-hover-dusty-rose); /* Button Hover Dusty Rose Color Variable for hover effect */
+  color: var(--accent-color, #18bfa7);
   transform: scale(1.03);
 }
 
 .slide-content p {
-  font-size: 1.3rem;
+  font-size: 1.18rem;
   font-weight: 400;
-  color: var(--paragraph-text-color); /* Paragraph Text Color Variable */
+  color: var(--secondary-text-color, #6e8a97);
   line-height: 1.7;
   margin-bottom: 2rem;
-  font-family: 'Tajawal', sans-serif;
-  text-align: center; /* Center align paragraph text */
-  max-width: 800px; /* Limit paragraph width for better readability */
+  font-family: 'Inter', 'Tajawal', sans-serif;
+  text-align: center;
+  max-width: 700px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center contact info items */
-  gap: 1rem; /* Spacing between contact info items */
+  align-items: center;
+  gap: 0.7rem;
   margin-top: 2rem;
 }
 
 .contact-info p {
-  font-size: 1.2rem;
-  color: var(--secondary-text-color); /* Secondary Text Color Variable */
-  font-family: 'Tajawal', sans-serif;
-  margin-bottom: 0; /* Remove default paragraph margin in contact info */
+  font-size: 1.11rem;
+  color: var(--secondary-text-color, #6e8a97);
+  font-family: 'Inter', 'Tajawal', sans-serif;
+  margin-bottom: 0;
 }
 
 .contact-info a {
-  color: var(--heading-text-color); /* Heading Text Color Variable for links */
+  color: var(--accent-color, #18bfa7);
   text-decoration: none;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.18s, transform 0.18s;
+  font-weight: 600;
 }
 
 .contact-info a:hover {
-  color: var(--button-hover-dusty-rose); /* Button Hover Dusty Rose Color Variable for link hover effect */
-  transform: scale(1.05);
+  color: var(--button-hover-background, #138e78);
+  transform: scale(1.07);
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact {
       padding: 2rem 1rem;
       margin: 3rem auto;
-      border-radius: 20px;
+      border-radius: var(--border-radius-md, 16px);
   }
-
   .slide-content {
       padding: 2rem;
-      border-radius: 20px;
+      border-radius: var(--border-radius-md, 16px);
   }
-
-  .slide-content h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1.5rem;
-  }
-
-  .slide-content p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-  }
-
-  .contact-info {
-      margin-top: 1.5rem;
-      gap: 0.8rem;
-  }
-
-  .contact-info p {
-      font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-      margin: 2.5rem auto;
-      padding: 1.5rem 0.8rem;
-      border-radius: 16px;
-  }
-
-  .slide-content {
-      padding: 1.5rem;
-      border-radius: 16px;
-  }
-
   .slide-content h2 {
       font-size: 2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
   }
-
   .slide-content p {
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.06rem;
+      margin-bottom: 1.3rem;
   }
-
   .contact-info {
       margin-top: 1.2rem;
-      gap: 0.6rem;
+      gap: 0.5rem;
   }
-
   .contact-info p {
       font-size: 1rem;
   }
 }
 
+@media (max-width: 480px) {
+  .contact {
+      margin: 2rem auto;
+      padding: 1.2rem 0.6rem;
+      border-radius: 12px;
+  }
+  .slide-content {
+      padding: 1rem;
+      border-radius: 12px;
+  }
+  .slide-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+  }
+  .slide-content p {
+      font-size: 0.96rem;
+      margin-bottom: 0.8rem;
+  }
+  .contact-info {
+      margin-top: 0.8rem;
+      gap: 0.4rem;
+  }
+  .contact-info p {
+      font-size: 0.9rem;
+  }
+}
 
-/* Animations */
+/* Animation */
 @keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
 }

@@ -1,40 +1,36 @@
-/* Hero.css - v8 - Improved Code with Semantic Naming, Streamlined Effects, and Color Variables */
-/* Main CSS file including general styles, hero section, buttons, social links, and responsive design - Color Variables */
+/* Modern Professional Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap');
 
 /* General RTL and UI/UX Adjustments */
 body {
-  direction: rtl; /* Set text direction to Right-to-Left for Arabic */
-  text-align: right; /* Default text alignment to right */
-  font-family: 'Tajawal', sans-serif; /* Default paragraph font */
-  background-color: var(--primary-background); /* Consistent background color across the site - Primary Background Color Variable */
-  padding: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Inter', 'Tajawal', sans-serif;
+  background: var(--primary-background, #f7fafd);
   margin: 0;
+  padding: 0;
 }
 
-/* Link Google Fonts - Elegant & Modern Pairing */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
-
-/* Hero Section Styles - Color Variables Applied */
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
-  background: var(--hero-background); /* Hero Background Color Variable - Primary Background */
-  border-radius: 20px;
-  box-shadow: 8px 8px 16px var(--hero-box-shadow-light), -8px -8px 16px var(--hero-box-shadow-white); /* Hero Shadow Color Variables */
+  background: var(--primary-background, #f7fafd);
+  border-radius: var(--border-radius-md, 16px);
+  box-shadow: var(--box-shadow-lg, 0 4px 32px rgba(24,48,80,0.08));
   width: 100vw;
   max-width: 1200px;
   min-height: 70vh;
   margin: 1vh auto;
   position: relative;
   overflow: hidden;
-  border: none;
 }
 
 .hero:hover {
-  background: var(--hero-hover-background); /* Hero Hover Background Color Variable - Hover Background */
-  box-shadow: 10px 10px 20px var(--hero-hover-box-shadow-light), -10px -10px 20px var(--hero-box-shadow-white); /* Hero Hover Shadow Color Variables */
+  box-shadow: var(--box-shadow-hover, 0 8px 32px rgba(24,48,80,0.14));
+  background: var(--secondary-background, #eaf0f6);
 }
 
 .hero::before {
@@ -44,61 +40,56 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 10%, transparent 70%);
   transform: rotate(45deg);
   animation: shimmer 8s infinite linear;
   pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes shimmer {
-  0% {
-      transform: rotate(45deg) translateX(-50%);
-  }
-  100% {
-      transform: rotate(45deg) translateX(50%);
-  }
+  0% { transform: rotate(45deg) translateX(-50%);}
+  100% { transform: rotate(45deg) translateX(50%);}
 }
 
-/* Hero Content Styles */
+/* Hero Content */
 .hero-content {
   width: 90%;
   display: flex;
-  margin-right: auto;
   margin-left: 5%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  animation: slideInRTL 0.8s ease-in-out;
+  animation: slideInRTL 0.8s cubic-bezier(.25,.8,.25,1);
   z-index: 1;
 }
 
-/* Hero Text Styles */
 .hero-text {
   text-align: right;
   max-width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  color: var(--heading-text-color); /* Heading Text Color Variable - Dusty Rose */
+  font-size: 2.8rem;
+  color: var(--heading-text-color, #183153);
   font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
-  font-family: 'Cairo', sans-serif;
-  text-shadow: 2px 2px 2px rgba(230, 230, 230, 0.5);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  font-family: 'Montserrat', 'Cairo', sans-serif;
+  text-shadow: 1px 1px 2px rgba(230,230,230,0.18);
 }
 
-.tagline { /* Semantic class name - Tagline style */
-  font-size: 1.3rem;
-  color: var(--primary-text-color); /* Primary Text Color Variable - Dark Gray */
+.tagline {
+  font-size: 1.23rem;
+  color: var(--primary-text-color, #222b45);
   margin: 0;
-  font-family: 'Tajawal', sans-serif;
-  text-shadow: 1px 1px 3px rgba(220, 220, 220, 0.2);
-  line-height: 1.7;
+  font-family: 'Inter', 'Tajawal', sans-serif;
+  text-shadow: 0.5px 0.5px 2px rgba(220,220,220,0.11);
+  line-height: 1.6;
 }
 
-/* CTA Buttons Styles - Color Variables Applied */
+/* CTA Buttons */
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -106,147 +97,101 @@ body {
   text-align: start;
   flex-direction: row-reverse;
   justify-content: flex-start;
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
-/* Button Base Styles - Neumorphic Checkbox Effect - Color Variables Applied */
 .btn-primary,
 .btn-secondary {
-  padding: 0.8rem 2.3rem;
+  padding: 0.8rem 2.1rem;
   border: none;
-  border-radius: 16px;
-  font-size: 1.2rem;
+  border-radius: var(--border-radius-md, 16px);
+  font-size: 1.13rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Cairo', sans-serif;
-  background-color: var(--primary-background); /* Neumorphic Background - Primary Background Color Variable */
-  color: var(--primary-text-color); /* Primary Text Color Variable */
-  box-shadow: -6px -6px 10px rgba(255,255,255,0.8),
-              6px  6px 10px rgba(0,0,0,0.1);
+  font-family: 'Montserrat', 'Cairo', sans-serif;
+  background: var(--accent-color, #18bfa7);
+  color: #fff;
+  box-shadow: var(--box-shadow-md, 0 2px 16px rgba(24,48,80,0.07));
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   outline: none;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
 }
 
-/* Button Specific Styles - Primary Button - Color Variables Applied */
 .btn-primary {
-  color: var(--heading-text-color); /* Dusty Rose for text - Heading Text Color Variable */
+  background: var(--accent-color, #18bfa7);
+  color: #fff;
 }
 
-/* Button Specific Styles - Secondary Button - Color Variables Applied */
 .btn-secondary {
-  color: var(--button-hover-pale-mauve); /* Pale Mauve for text - Button Hover Pale Mauve Color Variable */
+  background: var(--button-hover-background, #138e78);
+  color: #fff;
 }
 
-/* Button Hover and Active Effects - Neumorphic - Color Variables Applied */
 .btn-primary:hover,
 .btn-secondary:hover {
-  transform: translateY(-3px);
-  box-shadow: -8px -8px 12px rgba(255,255,255,0.8),
-              8px  8px 12px rgba(0,0,0,0.1);
-  background-color: var(--hover-background); /* Slightly darker hover background - Hover Background Color Variable */
+  background: var(--button-hover-background, #138e78);
+  transform: scale(1.04);
+  box-shadow: var(--box-shadow-hover, 0 8px 32px rgba(24,48,80,0.12));
 }
 
 .btn-primary:active,
 .btn-secondary:active {
-  transform: translateY(0);
-  box-shadow: inset -4px -4px 6px rgba(255,255,255,0.7),
-              inset 4px  4px 6px rgba(0,0,0,0.1);
+  background: var(--accent-color, #18bfa7);
+  transform: scale(0.99);
+  box-shadow: var(--box-shadow-md, 0 2px 16px rgba(24,48,80,0.07));
 }
 
-/* Button Shimmer Effect - Color Variables Applied - No color variables needed for shimmer effect itself, but background and radial gradient are already using variables */
-.btn-primary::before,
-.btn-secondary::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s ease;
-  pointer-events: none;
-}
-
-.btn-primary:hover::before,
-.btn-secondary::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-
-/* Social Links Styles - Color Variables Applied */
+/* Social Links */
 .social-links {
   display: flex;
   width: 90%;
-  gap: 2rem;
+  gap: 1.4rem;
   flex-direction: row-reverse;
   justify-content: flex-start;
   margin-top: 1rem;
 }
 
 .social-links a {
-  color: var(--social-links-color); /* Social Links Color Variable - Medium Gray */
-  font-size: 1.4rem;
-  transition: color 0.3s ease;
+  color: var(--accent-color, #18bfa7);
+  font-size: 1.5rem;
+  transition: color 0.18s;
 }
 
 .social-links a:hover {
-  color: var(--social-links-hover-color); /* Social Links Hover Color Variable - Antique White */
-  /* font-family: 'Cairo', sans-serif; Redundant if already inheriting or intended to be same as other headings/buttons */
+  color: var(--button-hover-background, #138e78);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-
   .hero-text {
-      text-align: center;
-      max-width: 100%;
-      margin-bottom: 2rem;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 1.4rem;
   }
-
   .cta-buttons {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 1rem;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
   }
-
   .social-links {
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-@keyframes slideInRTL { /* RTL Adapted Slide-In Animation */
-  from {
-      opacity: 0;
-      transform: translateX(-30px); /* Slide in from left in RTL */
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
+@keyframes slideInRTL {
+  from { opacity: 0; transform: translateX(-30px);}
+  to { opacity: 1; transform: translateX(0);}
 }
