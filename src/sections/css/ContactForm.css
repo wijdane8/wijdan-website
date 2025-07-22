@@ -1,56 +1,54 @@
-/* Modern Professional Contact Form */
+/* ContactForm.css - Styles for the Contact Form with Animated Button - v2 - Color Variables */
+
 .contact-form {
-  background: var(--primary-background, #f7fafd);
-  padding: 2.2rem;
-  border-radius: var(--border-radius-md, 16px);
-  box-shadow: var(--box-shadow-md, 0 2px 16px rgba(24,48,80,0.07));
+  background-color: var(--form-background-color); /* Form Background Color Variable - Off-White */
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 5px 5px 10px var(--form-box-shadow-light), -5px -5px 10px var(--form-box-shadow-white); /* Form Shadow Color Variables */
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: right;
   width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 800px;
 }
 
 .contact-form h3 {
   font-size: 2rem;
-  color: var(--heading-text-color, #183153);
-  font-family: 'Montserrat', 'Cairo', sans-serif;
-  margin-bottom: 1.3rem;
-  font-weight: 700;
+  color: var(--form-heading-color); /* Dusty Rose - matches headings - Form Heading Color Variable */
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 1.5rem;
+  text-shadow: none;
 }
 
 .form-group {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  font-family: 'Inter', 'Tajawal', sans-serif;
-  font-size: 1.05rem;
-  color: var(--secondary-text-color, #6e8a97);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.1rem;
+  color: var(--form-label-color); /* Dark gray - for labels - Form Label Color Variable */
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1.5px solid var(--accent-color, #18bfa7);
-  border-radius: 10px;
-  font-family: 'Inter', 'Tajawal', sans-serif;
+  border: 2px solid var(--form-field-border-color); /* Form Field Border Color Variable */
+  border-radius: 12px;
+  font-family: 'Tajawal', sans-serif;
   font-size: 1rem;
-  color: var(--primary-text-color, #222b45);
-  background: var(--secondary-background, #eaf0f6);
-  box-shadow: 0 1px 4px rgba(24,48,80,0.06);
-  transition: border-color 0.18s, box-shadow 0.18s;
+  color: var(--form-input-text-color); /* Dark gray - input text - Form Input Text Color Variable */
+  background-color: var(--form-field-background); /* Light background - form fields - Form Field Background Color Variable */
+  box-shadow: inset 2px 2px 5px var(--form-box-shadow-light), inset -2px -2px 5px var(--form-box-shadow-white); /* Form Shadow Color Variables */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--button-hover-background, #138e78);
-  box-shadow: 0 0 0 2px var(--accent-color, #18bfa7);
+  border-color: var(--form-field-focus-border-color); /* Dusty Rose - focus border - Form Field Focus Border Color Variable */
+  box-shadow: 3px 3px 7px var(--form-box-shadow-light), -3px -3px 7px var(--form-box-shadow-white); /* Form Shadow Color Variables */
   outline: none;
 }
 
@@ -58,38 +56,43 @@
   resize: vertical;
 }
 
-/* Button Container */
+/* Button Container - Center the button */
 .button-container {
-  text-align: center;
-  margin-top: 1.1rem;
+  text-align: center; /* Center the button horizontally */
 }
 
-/* Modern Animated Button */
+
+/* Animated Button Styles */
 .submit-button {
-  display: inline-flex;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  display: inline-flex; /* Changed to inline-flex for better alignment */
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--accent-color, #18bfa7);
-  color: #fff;
-  border: none;
-  border-radius: 24px;
+  justify-content: center; /* Center content inside button */
+  position: relative; /* For absolute positioning of pseudo-element */
+  overflow: hidden; /* Clip overflow for animation */
+
+  background: var(--button-solid-background); /* Solid Dusty Rose background - Replaced gradient - Button Solid Background Color Variable */
+  color: var(--button-text-color); /* Button Text Color Variable - white */
+  outline: none;
+  border: 2px solid var(--button-solid-background); /* Added border to match background - Button Solid Background Color Variable */
+  border-radius: 32px; /* More rounded corners to match design */
   font-weight: 600;
-  font-size: 1.18rem;
+  font-size: 1.2rem; /* Adjusted font size to match */
   cursor: pointer;
-  font-family: 'Montserrat', 'Cairo', sans-serif;
-  padding: 0.85rem 2.1rem;
-  box-shadow: var(--box-shadow-md, 0 2px 16px rgba(24,48,80,0.07));
-  transition: background 0.2s, transform 0.18s, box-shadow 0.18s, color 0.18s;
+  font-family: 'Cairo', sans-serif; /* Match font family */
+
+  padding: 0.8rem 2rem; /* Adjusted padding to match design */
+
+  box-shadow: 4px 4px 8px var(--form-box-shadow-light), -4px -4px 8px var(--form-box-shadow-white); /* Kept shadow - Form Shadow Color Variables */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Added transition for color and border */
 }
 
 .submit-button svg {
-  height: 20px;
-  width: 20px;
+  height: 20px; /* Adjusted svg size */
+  width: 20px; /* Adjusted svg size */
   margin-left: 10px;
-  fill: #fff;
-  transition: transform 0.4s;
+  fill: var(--button-text-color); /* Button Text Color Variable - white */
+  transition: transform 0.5s ease; /* Smooth rotation transition */
 }
 
 .submit-button .done {
@@ -97,80 +100,114 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  color: #fff;
-  font-weight: 700;
+  opacity: 0; /* Initially hidden */
+  color: var(--button-text-color); /* Ensure "Done!" text is white - Button Text Color Variable */
 }
 
 .submit-button .send {
-  opacity: 1;
-  color: #fff;
-  transition: transform 0.4s, opacity 0.4s;
+  opacity: 1; /* Initially visible */
+  color: var(--button-text-color); /* Ensure "Send" text is white - Button Text Color Variable */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for send text */
   padding: 0 5px;
 }
 
+
 .submit-button:hover {
-  background: var(--button-hover-background, #138e78);
-  color: #fff;
-  transform: scale(1.04);
-  box-shadow: var(--box-shadow-hover, 0 8px 32px rgba(24,48,80,0.12));
+  background-color: var(--button-hover-solid-background); /* Darker Dusty Rose on hover - Button Hover Solid Background Color Variable */
+  border-color: var(--button-hover-solid-background); /* Match border on hover - Button Hover Solid Background Color Variable */
+  color: var(--button-text-color); /* Keep text white on hover - Button Text Color Variable */
+  transform: scale(1.03); /* Slight scale up on hover */
+  box-shadow: 5px 5px 10px var(--form-box-shadow-light), -5px -5px 10px var(--form-box-shadow-white); /* Form Shadow Color Variables */
 }
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, white, transparent); /* White animation gradient */
+  transition: 0.7s; /* Adjusted transition duration */
+  z-index: 1; /* Ensure animation is above button background */
+}
+
 
 .submit-button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--accent-color, #18bfa7);
+  box-shadow: 5px 5px 10px var(--form-box-shadow-light), -5px -5px 10px var(--form-box-shadow-white), 0 0 0 2px var(--button-focus-shadow-color); /* Button Focus Shadow Color Variable */
 }
 
-/* Responsive Design */
+
+/* Responsive Design - Adjustments for button centering and form layout if needed */
 @media (max-width: 768px) {
   .contact-form {
-    padding: 1.3rem;
-    border-radius: 12px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
   }
+
   .contact-form h3 {
-    font-size: 1.45rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
   }
+
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
+
   .form-group label {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
+
   .form-group input,
   .form-group textarea {
     font-size: 0.95rem;
     padding: 0.7rem;
-    border-radius: 8px;
+    border-radius: 10px;
   }
+
   .submit-button {
-    font-size: 1rem;
-    padding: 0.7rem 1.4rem;
-    border-radius: 18px;
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 24px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-form {
-    padding: 0.8rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
   }
+
   .contact-form h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.7rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
   }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
   .form-group label {
     font-size: 0.9rem;
   }
+
   .form-group input,
   .form-group textarea {
     font-size: 0.9rem;
     padding: 0.6rem;
-    border-radius: 7px;
+    border-radius: 8px;
   }
+
   .submit-button {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.1rem;
-    border-radius: 13px;
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 20px;
   }
 }

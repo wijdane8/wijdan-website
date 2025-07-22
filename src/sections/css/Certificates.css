@@ -1,61 +1,66 @@
-/* Modern Professional Certificates Section */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap');
+/* Certificates.css - v3 - Using Color Variables */
+/* Link Google Fonts - Elegant & Modern Pairing */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal:wght@400;700&display=swap');
+
 
 /* Certificates Section Styles */
 .certificates-section {
-    width: 96vw;
-    max-width: 1200px;
+    width: 95vw;
+    max-width: 1400px;
     margin: 5rem auto;
-    background: var(--card-background, #fff);
-    color: var(--secondary-text-color, #6e8a97);
-    border-radius: var(--border-radius-lg, 24px);
-    box-shadow: var(--box-shadow-lg, 0 4px 32px rgba(24,48,80,0.08));
-    padding: 3.5rem 2.5rem;
+    background-color: var(--primary-background); /* Primary Background Color Variable */
+    color: var(--secondary-text-color); /* Secondary Text Color Variable */
+    border-radius: 32px;
+    /* Softer, more subtle neumorphic shadow */
+    box-shadow: 6px 6px 12px var(--light-shadow-color), -6px -6px 12px var(--white-shadow-color); /* Shadow Color Variables */
+    padding: 3rem 2rem;
     position: relative;
+    overflow: visible;
+    direction: rtl;
 }
 
 .certificate-content {
-    padding: 2.3rem;
+    padding: 2.5rem;
 }
 
 .certificate-content h2 {
-    font-size: 2.8rem;
-    color: var(--heading-text-color, #183153);
-    margin-bottom: 2.1rem;
+    font-size: 3.75rem;
+    color: var(--heading-text-color); /* Confirmed Heading Color: Dusty Rose - Heading Text Color Variable */
+    margin-bottom: 2.5rem;
     position: relative;
     line-height: 1.2;
-    font-family: 'Montserrat', 'Cairo', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-weight: 700;
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
 }
 
 .certificate-content h2::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
+    bottom: -1.2rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90px;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-color, #18bfa7) 0%, var(--heading-text-color, #183153) 70%);
-    border-radius: 2px;
+    background: var(--heading-text-color); /* Confirmed Heading Underline Color: Dusty Rose - Heading Text Color Variable */
+    border-radius: 3px;
 }
 
 .certificate-content ul {
     list-style: none;
     padding: 0;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .certificate-content li {
-    font-family: 'Inter', 'Tajawal', sans-serif;
-    font-size: 1.19rem;
-    line-height: 1.92;
-    margin-bottom: 1.1rem;
-    padding-bottom: 1.1rem;
-    border-bottom: 1.5px dashed var(--accent-color, #18bfa7);
-    color: var(--primary-text-color, #222b45);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.3rem;
+    line-height: 2.1;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1.5px dashed var(--certificate-dashed-border-color); /* Dashed border color variable */
+    color: var(--paragraph-text-color); /* Paragraph text color variable */
 }
 
 .certificate-content li:last-child {
@@ -65,90 +70,154 @@
 }
 
 .certificate-content li span.highlight {
-    color: var(--accent-color, #18bfa7);
-    font-weight: 700;
+    color: var(--certificate-highlight-color); /* Certificate highlight color variable */
+    font-weight: 600;
 }
 
-/* Buttons */
+/* Buttons with Neumorphic Checkbox Effect - Consistent Button Styling */
 .btn-primary,
 .btn-secondary {
     padding: 0.8rem 2.3rem;
     border: none;
-    border-radius: var(--border-radius-md, 16px);
-    font-size: 1.13rem;
+    border-radius: 16px;
+    font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
-    font-family: 'Montserrat', 'Cairo', sans-serif;
-    background: var(--button-background, #18bfa7);
-    color: var(--button-text-color, #fff);
-    box-shadow: var(--box-shadow-md, 0 2px 16px rgba(24,48,80,0.07));
-    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--primary-background); /* Neumorphic Background - consistent with body and sections - Primary Background Color Variable */
+    color: var(--primary-text-color); /* Primary Text Color Variable */
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.8),
+                6px  6px 10px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
     outline: none;
 }
 
 .btn-primary {
-    background: var(--accent-color, #18bfa7);
-    color: #fff;
+    background-color: var(--primary-background); /* Neumorphic Background - Primary Background Color Variable */
+    color: var(--heading-text-color); /* Dusty Rose for text - Heading Text Color Variable */
 }
 
 .btn-secondary {
-    background: var(--button-hover-background, #138e78);
-    color: #fff;
+    background-color: var(--primary-background); /* Neumorphic Background - Primary Background Color Variable */
+    color: var(--button-hover-pale-mauve); /* Pale Mauve for text - Button Hover Pale Mauve Color Variable */
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    background: var(--button-hover-background, #138e78);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--box-shadow-hover, 0 8px 32px rgba(24,48,80,0.12));
+    transform: translateY(-3px);
+    box-shadow: -8px -8px 12px rgba(255,255,255,0.8),
+                8px  8px 12px rgba(0,0,0,0.1);
+    background-color: var(--hover-background); /* Hover Background Color Variable */
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .certificates-section {
-        padding: 2.2rem 1.2rem;
-        margin: 4.2rem auto;
-    }
-    .certificate-content {
-        padding: 1.6rem;
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: inset -4px -4px 6px rgba(255,255,255,0.7),
+                inset 4px  4px 6px rgba(0,0,0,0.1);
+    background-color: var(--primary-background); /* Primary Background Color Variable */
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.btn-primary:hover::before,
+.btn-secondary::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Responsive Design for Certificates Section - v7 - Consistent with Main CSS Breakpoints - Color Variables */
+@media (max-width: 1200px) {
+    .certificate-content li {
+        font-size: 1.25rem;
+        line-height: 2;
     }
     .certificate-content h2 {
-        font-size: 2.1rem;
-        margin-bottom: 1.4rem;
+        font-size: 3.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .certificates-section {
+        padding: 3.5rem 2.5rem;
+        margin: 4.5rem auto;
+    }
+    .certificate-content {
+        padding: 2rem;
+    }
+    .certificate-content h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
     .certificate-content ul {
-        margin-top: 1.1rem;
+        margin-top: 2rem;
     }
     .certificate-content li {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        margin-bottom: 0.9rem;
-        padding-bottom: 0.9rem;
+        font-size: 1.15rem;
+        line-height: 1.9;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
 @media (max-width: 768px) {
     .certificates-section {
-        padding: 1.6rem 0.8rem;
-        margin: 3.2rem auto;
-        border-radius: var(--border-radius-md, 16px);
+        padding: 2.5rem 2rem;
+        margin: 4rem auto;
+        border-radius: 24px;
     }
     .certificate-content {
-        padding: 1rem;
+        padding: 1.8rem;
     }
     .certificate-content h2 {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 1.8rem;
     }
     .certificate-content ul {
-        margin-top: 0.8rem;
+        margin-top: 1.8rem;
     }
     .certificate-content li {
-        font-size: 0.96rem;
-        line-height: 1.5;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-section {
+        padding: 2rem 1.5rem;
+        margin: 3.5rem auto;
+        border-radius: 20px;
+    }
+    .certificate-content {
+        padding: 1.2rem;
+    }
+    .certificate-content h2 {
+        font-size: 2.1rem;
+        margin-bottom: 1.2rem;
+    }
+    .certificate-content ul {
+        margin-top: 1.5rem;
+    }
+    .certificate-content li {
+        font-size: 1rem;
+        line-height: 1.7;
         margin-bottom: 0.7rem;
         padding-bottom: 0.7rem;
     }
