@@ -2,7 +2,7 @@ name: نشر إلى GitHub Pages
 
 on:
   push:
-    branches: [ "main" ] # قم بتغيير "main" إلى اسم الفرع الرئيسي الخاص بك (مثل "master")
+    branches: [ "master" ] 
 
 jobs:
   build-and-deploy:
