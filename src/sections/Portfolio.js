@@ -26,7 +26,7 @@ import project4Image from './images/pexels-padrinan-19670.jpg';
             summary: "PIXELNEC",
             answer: "منصة لعرض الصور والتفاعل معها طُوُرت بـ JavaScript وتم ربطها مع API خارجية.",
             image: project3Image,
-            link: "https://pixelnec-demo.example.com",
+            link: "https://wijdane8.github.io/PIXELLENCE/",
         },
         project4: {
             summary: "متجر إلكتروني",
