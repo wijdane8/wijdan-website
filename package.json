@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@svgr/cli": "^9.0.0",
+    "@svgr/cli": "^8.0.0",
     "cra-template": "1.2.0",
     "font-awesome": "^4.7.0",
     "gsap": "^3.13.1",
